@@ -23,21 +23,37 @@ namespace Chrono
             set { titleLabel.Text = value; }
         }
 
-        public string TaskContent
-        {
-            get { return descriptionLabel.Text; }
-            set { descriptionLabel.Text = value; }
-        }
-
         public string TaskStatus
         {
             get { return statusLabel.Text; }
             set { statusLabel.Text = value; }
         }
 
-        private void descriptionLabel_TextChanged(object sender, EventArgs e)
+        public DateTime deadline
         {
+            get
+            {
 
+                if (DateTime.TryParse(deadlineText.Text, out DateTime result))
+                {
+                    return result;
+                }
+                else
+                {
+                   
+                    return DateTime.MinValue;
+                }
+            }
+            set
+            {
+       
+                deadlineText.Text = value.ToString("MM/dd/yyyy");
+            }
         }
+        public string TaskPriority
+        {
+            get { return deadLineTxt.Text; }
+            set { deadLineTxt.Text = value; }
+        }   
     }
 }
