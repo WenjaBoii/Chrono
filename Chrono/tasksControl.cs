@@ -14,7 +14,8 @@ namespace Chrono
     {
         public tasksControl()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            checkIfNull();
         }
 
 
@@ -22,8 +23,8 @@ namespace Chrono
 
         public void checkIfNull()
         {
-            if (titleTextBox.Text == null || setPriority == null ||
-                   statusComboBox == null)
+            if (titleTextBox == null || setPriority == null||
+                   statusComboBox.SelectedItem == null )
             {
                     buttonCreateTask.Enabled = false;
             }
@@ -53,11 +54,15 @@ namespace Chrono
             catch (Exception)
             {
                 MessageBox.Show("Please select a status for the task.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                taskListFlowLayout.Visible = true;
                 return;
             }
 
 
             titleTextBox.Clear();
+            setPriority = null;
+            statusComboBox.SelectedItem.Equals(null);
+            dateTimeDropdownBox.Value = DateTime.Now;   
 
             taskListFlowLayout.Controls.Add(newTask);
         }
@@ -73,6 +78,8 @@ namespace Chrono
         private void addTaskButton_Click(object sender, EventArgs e)
         {
             createTaskPanelVisible(true);
+            checkIfNull();
+            
         }
 
         private void createTaskButton_Click(object sender, EventArgs e)

@@ -305,6 +305,7 @@
             // 
             // statusComboBox
             // 
+            this.statusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.statusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusComboBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.statusComboBox.FormattingEnabled = true;
@@ -316,7 +317,6 @@
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(249, 24);
             this.statusComboBox.TabIndex = 8;
-            this.statusComboBox.Text = "Ongoing";
             this.statusComboBox.SelectedIndexChanged += new System.EventHandler(this.statusComboBox_SelectedIndexChanged);
             // 
             // lowPriorityButton
