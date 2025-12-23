@@ -67,6 +67,7 @@ namespace Chrono
           createTaskPanel.Visible = status;   
             createTaskPanel.BringToFront(); 
             createTaskPanel.Enabled = status; 
+            taskListFlowLayout.Visible = status == false;   
         }
 
         private void addTaskButton_Click(object sender, EventArgs e)
