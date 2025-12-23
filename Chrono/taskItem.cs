@@ -23,21 +23,10 @@ namespace Chrono
             set { titleLabel.Text = value; }
         }
 
-        public string TaskContent
-        {
-            get { return descriptionLabel.Text; }
-            set { descriptionLabel.Text = value; }
-        }
-
         public string TaskStatus
         {
             get { return statusLabel.Text; }
             set { statusLabel.Text = value; }
-        }
-
-        private void descriptionLabel_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
