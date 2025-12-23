@@ -30,12 +30,17 @@
         {
             this.tasksPanel = new System.Windows.Forms.Panel();
             this.createTaskPanel = new System.Windows.Forms.Panel();
-            this.statusComboBox = new System.Windows.Forms.ComboBox();
-            this.contentTextBox = new System.Windows.Forms.RichTextBox();
-            this.titleTextBox = new System.Windows.Forms.TextBox();
-            this.buttonCreateTask = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimeDropdownBox = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.buttonAddTaskCancel = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.highPriorityButton = new System.Windows.Forms.Button();
+            this.mediumPriorityButton = new System.Windows.Forms.Button();
+            this.buttonCreateTask = new System.Windows.Forms.Button();
+            this.lowPriorityButton = new System.Windows.Forms.Button();
+            this.statusComboBox = new System.Windows.Forms.ComboBox();
+            this.titleTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.taskListPanel = new System.Windows.Forms.Panel();
@@ -43,6 +48,7 @@
             this.createTaskText = new System.Windows.Forms.Label();
             this.taskListInfoText = new System.Windows.Forms.Label();
             this.taskListPicture = new System.Windows.Forms.PictureBox();
+            this.taskListFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.taskHeaderTwo = new System.Windows.Forms.Panel();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,7 +62,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tasksText = new System.Windows.Forms.Label();
-            this.taskListFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.tasksPanel.SuspendLayout();
             this.createTaskPanel.SuspendLayout();
             this.taskListPanel.SuspendLayout();
@@ -80,21 +85,117 @@
             // createTaskPanel
             // 
             this.createTaskPanel.BackColor = System.Drawing.Color.AliceBlue;
-            this.createTaskPanel.Controls.Add(this.statusComboBox);
-            this.createTaskPanel.Controls.Add(this.contentTextBox);
-            this.createTaskPanel.Controls.Add(this.titleTextBox);
-            this.createTaskPanel.Controls.Add(this.buttonCreateTask);
-            this.createTaskPanel.Controls.Add(this.label3);
+            this.createTaskPanel.Controls.Add(this.dateTimeDropdownBox);
+            this.createTaskPanel.Controls.Add(this.label9);
+            this.createTaskPanel.Controls.Add(this.buttonAddTaskCancel);
             this.createTaskPanel.Controls.Add(this.label6);
+            this.createTaskPanel.Controls.Add(this.highPriorityButton);
+            this.createTaskPanel.Controls.Add(this.mediumPriorityButton);
+            this.createTaskPanel.Controls.Add(this.buttonCreateTask);
+            this.createTaskPanel.Controls.Add(this.lowPriorityButton);
+            this.createTaskPanel.Controls.Add(this.statusComboBox);
+            this.createTaskPanel.Controls.Add(this.titleTextBox);
+            this.createTaskPanel.Controls.Add(this.label3);
             this.createTaskPanel.Controls.Add(this.label7);
             this.createTaskPanel.Controls.Add(this.label8);
             this.createTaskPanel.Enabled = false;
             this.createTaskPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createTaskPanel.Location = new System.Drawing.Point(11, 213);
+            this.createTaskPanel.Location = new System.Drawing.Point(140, 213);
             this.createTaskPanel.Name = "createTaskPanel";
-            this.createTaskPanel.Size = new System.Drawing.Size(589, 277);
+            this.createTaskPanel.Size = new System.Drawing.Size(306, 277);
             this.createTaskPanel.TabIndex = 6;
             this.createTaskPanel.Visible = false;
+            // 
+            // dateTimeDropdownBox
+            // 
+            this.dateTimeDropdownBox.AccessibleName = "";
+            this.dateTimeDropdownBox.CustomFormat = "";
+            this.dateTimeDropdownBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeDropdownBox.Location = new System.Drawing.Point(20, 101);
+            this.dateTimeDropdownBox.Name = "dateTimeDropdownBox";
+            this.dateTimeDropdownBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateTimeDropdownBox.Size = new System.Drawing.Size(278, 22);
+            this.dateTimeDropdownBox.TabIndex = 15;
+            this.dateTimeDropdownBox.Value = new System.DateTime(2025, 12, 23, 0, 0, 0, 0);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(17, 82);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 16);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "DEADLINE:";
+            // 
+            // buttonAddTaskCancel
+            // 
+            this.buttonAddTaskCancel.BackColor = System.Drawing.Color.White;
+            this.buttonAddTaskCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddTaskCancel.ForeColor = System.Drawing.Color.Black;
+            this.buttonAddTaskCancel.Location = new System.Drawing.Point(20, 237);
+            this.buttonAddTaskCancel.Name = "buttonAddTaskCancel";
+            this.buttonAddTaskCancel.Size = new System.Drawing.Size(124, 33);
+            this.buttonAddTaskCancel.TabIndex = 13;
+            this.buttonAddTaskCancel.Text = "Cancel";
+            this.buttonAddTaskCancel.UseVisualStyleBackColor = false;
+            this.buttonAddTaskCancel.Click += new System.EventHandler(this.buttonAddTaskCancel_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(17, 129);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 16);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "PRIORITY:";
+            // 
+            // highPriorityButton
+            // 
+            this.highPriorityButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highPriorityButton.Location = new System.Drawing.Point(222, 148);
+            this.highPriorityButton.Name = "highPriorityButton";
+            this.highPriorityButton.Size = new System.Drawing.Size(76, 29);
+            this.highPriorityButton.TabIndex = 11;
+            this.highPriorityButton.Text = "High";
+            this.highPriorityButton.UseVisualStyleBackColor = true;
+            this.highPriorityButton.Click += new System.EventHandler(this.highPriorityButton_Click);
+            // 
+            // mediumPriorityButton
+            // 
+            this.mediumPriorityButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediumPriorityButton.Location = new System.Drawing.Point(121, 148);
+            this.mediumPriorityButton.Name = "mediumPriorityButton";
+            this.mediumPriorityButton.Size = new System.Drawing.Size(95, 29);
+            this.mediumPriorityButton.TabIndex = 10;
+            this.mediumPriorityButton.Text = "Medium";
+            this.mediumPriorityButton.UseVisualStyleBackColor = true;
+            this.mediumPriorityButton.Click += new System.EventHandler(this.mediumPriorityButton_Click);
+            // 
+            // buttonCreateTask
+            // 
+            this.buttonCreateTask.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonCreateTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreateTask.ForeColor = System.Drawing.Color.White;
+            this.buttonCreateTask.Location = new System.Drawing.Point(156, 237);
+            this.buttonCreateTask.Name = "buttonCreateTask";
+            this.buttonCreateTask.Size = new System.Drawing.Size(135, 33);
+            this.buttonCreateTask.TabIndex = 4;
+            this.buttonCreateTask.Text = "Create";
+            this.buttonCreateTask.UseVisualStyleBackColor = false;
+            this.buttonCreateTask.Click += new System.EventHandler(this.buttonCreateTask_Click_1);
+            // 
+            // lowPriorityButton
+            // 
+            this.lowPriorityButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lowPriorityButton.Location = new System.Drawing.Point(20, 148);
+            this.lowPriorityButton.Name = "lowPriorityButton";
+            this.lowPriorityButton.Size = new System.Drawing.Size(95, 29);
+            this.lowPriorityButton.TabIndex = 9;
+            this.lowPriorityButton.Text = "Low";
+            this.lowPriorityButton.UseVisualStyleBackColor = true;
+            this.lowPriorityButton.Click += new System.EventHandler(this.lowPriorityButton_Click);
             // 
             // statusComboBox
             // 
@@ -102,86 +203,55 @@
             this.statusComboBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.statusComboBox.FormattingEnabled = true;
             this.statusComboBox.Items.AddRange(new object[] {
-            "Pending",
+            "Ongoing",
             "Missed ",
             "Complete"});
-            this.statusComboBox.Location = new System.Drawing.Point(230, 187);
+            this.statusComboBox.Location = new System.Drawing.Point(20, 201);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(249, 24);
             this.statusComboBox.TabIndex = 8;
-            this.statusComboBox.Text = "Task Status";
-            // 
-            // contentTextBox
-            // 
-            this.contentTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contentTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.contentTextBox.Location = new System.Drawing.Point(232, 101);
-            this.contentTextBox.Name = "contentTextBox";
-            this.contentTextBox.Size = new System.Drawing.Size(247, 69);
-            this.contentTextBox.TabIndex = 7;
-            this.contentTextBox.Text = "Write Content";
+            this.statusComboBox.Text = "Ongoing";
+            this.statusComboBox.SelectedIndexChanged += new System.EventHandler(this.statusComboBox_SelectedIndexChanged);
             // 
             // titleTextBox
             // 
             this.titleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.titleTextBox.Location = new System.Drawing.Point(201, 65);
+            this.titleTextBox.Location = new System.Drawing.Point(20, 53);
             this.titleTextBox.Name = "titleTextBox";
             this.titleTextBox.Size = new System.Drawing.Size(278, 22);
             this.titleTextBox.TabIndex = 5;
-            this.titleTextBox.Text = "Enter title";
-            // 
-            // buttonCreateTask
-            // 
-            this.buttonCreateTask.BackColor = System.Drawing.Color.RoyalBlue;
-            this.buttonCreateTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreateTask.ForeColor = System.Drawing.Color.White;
-            this.buttonCreateTask.Location = new System.Drawing.Point(250, 228);
-            this.buttonCreateTask.Name = "buttonCreateTask";
-            this.buttonCreateTask.Size = new System.Drawing.Size(112, 37);
-            this.buttonCreateTask.TabIndex = 4;
-            this.buttonCreateTask.Text = "Create";
-            this.buttonCreateTask.UseVisualStyleBackColor = false;
-            this.buttonCreateTask.Click += new System.EventHandler(this.buttonCreateTask_Click_1);
+            this.titleTextBox.TextChanged += new System.EventHandler(this.titleTextBox_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(135, 187);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 181);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.Size = new System.Drawing.Size(65, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "STATUS:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(123, 122);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "CONTENT:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(133, 65);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(17, 34);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 20);
+            this.label7.Size = new System.Drawing.Size(87, 16);
             this.label7.TabIndex = 1;
-            this.label7.Text = "TITLE:";
+            this.label7.Text = "TASK NAME:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(225, 8);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(7, 7);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 25);
+            this.label8.Size = new System.Drawing.Size(133, 18);
             this.label8.TabIndex = 0;
-            this.label8.Text = "CREATE TASK";
+            this.label8.Text = "ADD NEW TASK";
             // 
             // taskListPanel
             // 
@@ -233,6 +303,13 @@
             this.taskListPicture.Size = new System.Drawing.Size(69, 67);
             this.taskListPicture.TabIndex = 0;
             this.taskListPicture.TabStop = false;
+            // 
+            // taskListFlowLayout
+            // 
+            this.taskListFlowLayout.Location = new System.Drawing.Point(11, 213);
+            this.taskListFlowLayout.Name = "taskListFlowLayout";
+            this.taskListFlowLayout.Size = new System.Drawing.Size(589, 274);
+            this.taskListFlowLayout.TabIndex = 9;
             // 
             // taskHeaderTwo
             // 
@@ -366,13 +443,6 @@
             this.tasksText.TabIndex = 0;
             this.tasksText.Text = "Tasks";
             // 
-            // taskListFlowLayout
-            // 
-            this.taskListFlowLayout.Location = new System.Drawing.Point(12, 214);
-            this.taskListFlowLayout.Name = "taskListFlowLayout";
-            this.taskListFlowLayout.Size = new System.Drawing.Size(588, 274);
-            this.taskListFlowLayout.TabIndex = 9;
-            // 
             // tasksControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,13 +487,18 @@
         private System.Windows.Forms.Button addTaskButton;
         public System.Windows.Forms.Panel createTaskPanel;
         private System.Windows.Forms.ComboBox statusComboBox;
-        private System.Windows.Forms.RichTextBox contentTextBox;
         private System.Windows.Forms.TextBox titleTextBox;
         private System.Windows.Forms.Button buttonCreateTask;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.FlowLayoutPanel taskListFlowLayout;
+        private System.Windows.Forms.Button highPriorityButton;
+        private System.Windows.Forms.Button mediumPriorityButton;
+        private System.Windows.Forms.Button lowPriorityButton;
+        private System.Windows.Forms.Button buttonAddTaskCancel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.DateTimePicker dateTimeDropdownBox;
     }
 }

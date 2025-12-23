@@ -28,5 +28,32 @@ namespace Chrono
             get { return statusLabel.Text; }
             set { statusLabel.Text = value; }
         }
+
+        public DateTime deadline
+        {
+            get
+            {
+
+                if (DateTime.TryParse(deadlineText.Text, out DateTime result))
+                {
+                    return result;
+                }
+                else
+                {
+                   
+                    return DateTime.MinValue;
+                }
+            }
+            set
+            {
+       
+                deadlineText.Text = value.ToString("MM/dd/yyyy");
+            }
+        }
+        public string TaskPriority
+        {
+            get { return deadLineTxt.Text; }
+            set { deadLineTxt.Text = value; }
+        }   
     }
 }

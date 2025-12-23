@@ -31,24 +31,30 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.statusLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
+            this.deadlineText = new System.Windows.Forms.Label();
+            this.deadLineTxt = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.deadLineTxt);
+            this.panel1.Controls.Add(this.deadlineText);
             this.panel1.Controls.Add(this.statusLabel);
             this.panel1.Controls.Add(this.titleLabel);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 89);
+            this.panel1.Size = new System.Drawing.Size(262, 94);
             this.panel1.TabIndex = 0;
             // 
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
             this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLabel.Location = new System.Drawing.Point(10, 58);
+            this.statusLabel.Location = new System.Drawing.Point(187, 68);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(64, 16);
             this.statusLabel.TabIndex = 1;
@@ -57,12 +63,42 @@
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(3, 12);
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(4, 6);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(71, 31);
+            this.titleLabel.Size = new System.Drawing.Size(122, 25);
             this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "Title";
+            this.titleLabel.Text = "New Task ";
+            // 
+            // deadlineText
+            // 
+            this.deadlineText.AutoSize = true;
+            this.deadlineText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deadlineText.Location = new System.Drawing.Point(6, 31);
+            this.deadlineText.Name = "deadlineText";
+            this.deadlineText.Size = new System.Drawing.Size(74, 16);
+            this.deadlineText.TabIndex = 2;
+            this.deadlineText.Text = "DeadLine";
+            // 
+            // deadLineTxt
+            // 
+            this.deadLineTxt.AutoSize = true;
+            this.deadLineTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deadLineTxt.Location = new System.Drawing.Point(97, 69);
+            this.deadLineTxt.Name = "deadLineTxt";
+            this.deadLineTxt.Size = new System.Drawing.Size(64, 16);
+            this.deadLineTxt.TabIndex = 3;
+            this.deadLineTxt.Text = " Priority ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Priority Level:";
             // 
             // taskItem
             // 
@@ -82,5 +118,8 @@
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label statusLabel;
         public System.Windows.Forms.Label titleLabel;
+        public System.Windows.Forms.Label deadlineText;
+        public System.Windows.Forms.Label deadLineTxt;
+        public System.Windows.Forms.Label label2;
     }
 }

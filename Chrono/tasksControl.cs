@@ -14,9 +14,53 @@ namespace Chrono
     {
         public tasksControl()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
-       
+
+
+        string setPriority;
+
+        public void checkIfNull()
+        {
+            if (titleTextBox.Text == null || setPriority == null ||
+                   statusComboBox == null)
+            {
+                    buttonCreateTask.Enabled = false;
+            }
+            else
+            {
+                buttonCreateTask.Enabled = true;
+            }
+        }
+
+        public void createTask()
+        {
+         
+            taskItem newTask = new taskItem();
+
+            createTaskPanelVisible(false);
+            taskListFlowLayout.BringToFront();
+           
+            newTask.TaskTitle = titleTextBox.Text;
+            newTask.deadline = dateTimeDropdownBox.Value;
+
+            newTask.TaskPriority = setPriority;
+
+            try
+            {
+                newTask.TaskStatus = statusComboBox.SelectedItem.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please select a status for the task.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            titleTextBox.Clear();
+
+            taskListFlowLayout.Controls.Add(newTask);
+        }
 
         public void createTaskPanelVisible(bool status)
         {
@@ -35,28 +79,44 @@ namespace Chrono
             createTaskPanelVisible(true);   
         }
 
-        private void buttonCreateTask_Click(object sender, EventArgs e)
+
+        public void buttonCreateTask_Click_1(object sender, EventArgs e)
         {
-            createTaskPanelVisible(false);
-            taskListPanel.Controls.Clear();
+         
+            createTask();
         }
 
-        private void buttonCreateTask_Click_1(object sender, EventArgs e)
+        private void buttonAddTaskCancel_Click(object sender, EventArgs e)
         {
-            createTaskPanelVisible(false);
-            taskListPanel.Controls.Clear();
+            createTaskPanelVisible(false);  
+        }
 
-            taskItem newTask = new taskItem();  
+        private void lowPriorityButton_Click(object sender, EventArgs e)
+        {
+            setPriority = "Low";
+            checkIfNull();
+        }
 
-            newTask.TaskTitle = titleTextBox.Text;
-            newTask.TaskContent = contentTextBox.Text;
-            newTask.TaskStatus = statusComboBox.SelectedItem.ToString();
+        private void mediumPriorityButton_Click(object sender, EventArgs e)
+        {
+            setPriority = "Medium";
+            checkIfNull();
+        }
 
-            taskListFlowLayout.Controls.Add(newTask);
+        private void highPriorityButton_Click(object sender, EventArgs e)
+        {
+            setPriority = "High";
+            checkIfNull();  
+        }
 
-            titleTextBox.Clear();
-            contentTextBox.Clear();
-            
+        private void titleTextBox_TextChanged(object sender, EventArgs e)
+        {
+            checkIfNull();
+        }
+
+        private void statusComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            checkIfNull();
         }
     }
 }
