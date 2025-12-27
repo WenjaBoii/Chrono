@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,13 +21,13 @@ namespace Chrono
         public string TaskTitle
         {
             get { return titleLabel.Text; }
-            set { titleLabel.Text = value; }
+            private set { titleLabel.Text = value; }
         }
 
         public string TaskStatus
         {
             get { return statusLabel.Text; }
-            set { statusLabel.Text = value; }
+            private set { statusLabel.Text = value; }
         }
 
         public DateTime deadline
@@ -44,7 +45,7 @@ namespace Chrono
                     return DateTime.MinValue;
                 }
             }
-            set
+            private set
             {
        
                 deadlineText.Text = value.ToString("MM/dd/yyyy");
@@ -53,7 +54,19 @@ namespace Chrono
         public string TaskPriority
         {
             get { return deadLineTxt.Text; }
-            set { deadLineTxt.Text = value; }
+            private set { deadLineTxt.Text = value; }
+        }
+
+        public bool isVisibile { get; set; } = true;    
+
+        public taskItem(string taskName, string status, DateTime deadline, string priority)
+        {
+            InitializeComponent();
+
+            TaskTitle = taskName;
+            TaskStatus = status;
+            this.deadline = deadline;
+            TaskPriority = priority;
         }   
     }
 }

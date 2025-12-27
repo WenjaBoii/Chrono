@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,8 +19,11 @@ namespace Chrono
             checkIfNull();
         }
 
-
         string setPriority;
+        string itemToFind;
+        LinkedList<taskItem> tasksList = new LinkedList<taskItem>();
+
+
 
         public void checkIfNull()
         {
@@ -34,37 +38,51 @@ namespace Chrono
             }
         }
 
+
         public void createTask()
         {
-         
-            taskItem newTask = new taskItem();
+          
+            taskItem newTask = new taskItem(titleTextBox.Text, statusComboBox.Text,
+                                            dateTimeDropdownBox.Value, setPriority);
+
+            tasksList.AddFirst(newTask);
+            tasksList.AddLast(newTask);
+            foreach (var tasks in tasksList)
+            {
+                taskListFlowLayout.Controls.Add(tasks);
+                Console.WriteLine(tasks.TaskTitle); 
+            }
+           
 
             createTaskPanelVisible(false);
             taskListFlowLayout.BringToFront();
-           
-            newTask.TaskTitle = titleTextBox.Text;
-            newTask.deadline = dateTimeDropdownBox.Value;
-
-            newTask.TaskPriority = setPriority;
-
-            try
-            {
-                newTask.TaskStatus = statusComboBox.SelectedItem.ToString();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please select a status for the task.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                taskListFlowLayout.Visible = true;
-                return;
-            }
-
-
+            
             titleTextBox.Clear();
             setPriority = null;
-            statusComboBox.SelectedItem.Equals(null);
-            dateTimeDropdownBox.Value = DateTime.Now;   
+            statusComboBox.SelectedItem = -1;
+            dateTimeDropdownBox.Value = DateTime.Now;
 
-            taskListFlowLayout.Controls.Add(newTask);
+            
+        }
+        public void findTask()
+        {
+            findItemClass.moveToFront<taskItem>(tasksList,
+                tasksList.FirstOrDefault(t => t.TaskTitle.Equals(itemToFind)));
+            
+            findItemClass.setVisibility<taskItem>(tasksList,
+                t => !t.TaskTitle.Equals(searchBar.Text), false);
+
+            findItemClass.setVisibility<taskItem>(tasksList,
+                t => t.TaskTitle.Equals(searchBar.Text), true); 
+
+
+            foreach (var tasks in tasksList)
+            {
+                
+                taskListFlowLayout.Controls.Add(tasks);
+                Console.WriteLine(tasks.TaskTitle);
+            }
+           
         }
 
         public void createTaskPanelVisible(bool status)
@@ -125,6 +143,27 @@ namespace Chrono
         private void statusComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             checkIfNull();
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            findTask();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancelSearchButton_Click(object sender, EventArgs e)
+        {
+            findItemClass.showItem<taskItem>(tasksList);
+            
+            foreach (Control c in taskListFlowLayout.Controls)
+            {  
+             c.Visible = true;  
+            }   
+            searchBar.Clear();   
         }
     }
 }
