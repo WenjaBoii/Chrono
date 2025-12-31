@@ -29,6 +29,20 @@
         private void InitializeComponent()
         {
             this.taskListPanel = new System.Windows.Forms.Panel();
+            this.editTaskPanel = new System.Windows.Forms.Panel();
+            this.editPanelDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.buttonCancelEdit = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.highPriorityButtonEdit = new System.Windows.Forms.Button();
+            this.mediumPriorityButtonEdit = new System.Windows.Forms.Button();
+            this.zz = new System.Windows.Forms.Button();
+            this.lowPriorityButtonEdit = new System.Windows.Forms.Button();
+            this.editStatusComboBox = new System.Windows.Forms.ComboBox();
+            this.editTitleTextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.createTaskPanel = new System.Windows.Forms.Panel();
             this.dateTimeDropdownBox = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -65,6 +79,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tasksText = new System.Windows.Forms.Label();
             this.taskListPanel.SuspendLayout();
+            this.editTaskPanel.SuspendLayout();
             this.createTaskPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.taskListPicture)).BeginInit();
             this.tasksPanel.SuspendLayout();
@@ -75,7 +90,6 @@
             // taskListPanel
             // 
             this.taskListPanel.BackColor = System.Drawing.Color.White;
-            this.taskListPanel.Controls.Add(this.createTaskPanel);
             this.taskListPanel.Controls.Add(this.createTaskButton);
             this.taskListPanel.Controls.Add(this.createTaskText);
             this.taskListPanel.Controls.Add(this.taskListInfoText);
@@ -84,6 +98,174 @@
             this.taskListPanel.Name = "taskListPanel";
             this.taskListPanel.Size = new System.Drawing.Size(588, 278);
             this.taskListPanel.TabIndex = 2;
+            // 
+            // editTaskPanel
+            // 
+            this.editTaskPanel.BackColor = System.Drawing.Color.AliceBlue;
+            this.editTaskPanel.Controls.Add(this.editPanelDateTimePicker);
+            this.editTaskPanel.Controls.Add(this.label11);
+            this.editTaskPanel.Controls.Add(this.buttonCancelEdit);
+            this.editTaskPanel.Controls.Add(this.label12);
+            this.editTaskPanel.Controls.Add(this.highPriorityButtonEdit);
+            this.editTaskPanel.Controls.Add(this.mediumPriorityButtonEdit);
+            this.editTaskPanel.Controls.Add(this.zz);
+            this.editTaskPanel.Controls.Add(this.lowPriorityButtonEdit);
+            this.editTaskPanel.Controls.Add(this.editStatusComboBox);
+            this.editTaskPanel.Controls.Add(this.editTitleTextBox);
+            this.editTaskPanel.Controls.Add(this.label13);
+            this.editTaskPanel.Controls.Add(this.label14);
+            this.editTaskPanel.Controls.Add(this.label15);
+            this.editTaskPanel.Enabled = false;
+            this.editTaskPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editTaskPanel.Location = new System.Drawing.Point(12, 216);
+            this.editTaskPanel.Name = "editTaskPanel";
+            this.editTaskPanel.Size = new System.Drawing.Size(589, 279);
+            this.editTaskPanel.TabIndex = 16;
+            this.editTaskPanel.Visible = false;
+            // 
+            // editPanelDateTimePicker
+            // 
+            this.editPanelDateTimePicker.AccessibleName = "";
+            this.editPanelDateTimePicker.CustomFormat = "";
+            this.editPanelDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editPanelDateTimePicker.Location = new System.Drawing.Point(168, 101);
+            this.editPanelDateTimePicker.Name = "editPanelDateTimePicker";
+            this.editPanelDateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.editPanelDateTimePicker.Size = new System.Drawing.Size(278, 22);
+            this.editPanelDateTimePicker.TabIndex = 15;
+            this.editPanelDateTimePicker.Value = new System.DateTime(2025, 12, 23, 0, 0, 0, 0);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(165, 82);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 16);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "DEADLINE:";
+            // 
+            // buttonCancelEdit
+            // 
+            this.buttonCancelEdit.BackColor = System.Drawing.Color.White;
+            this.buttonCancelEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelEdit.ForeColor = System.Drawing.Color.Black;
+            this.buttonCancelEdit.Location = new System.Drawing.Point(168, 237);
+            this.buttonCancelEdit.Name = "buttonCancelEdit";
+            this.buttonCancelEdit.Size = new System.Drawing.Size(124, 33);
+            this.buttonCancelEdit.TabIndex = 13;
+            this.buttonCancelEdit.Text = "Cancel";
+            this.buttonCancelEdit.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(165, 129);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 16);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "PRIORITY:";
+            // 
+            // highPriorityButtonEdit
+            // 
+            this.highPriorityButtonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highPriorityButtonEdit.Location = new System.Drawing.Point(370, 148);
+            this.highPriorityButtonEdit.Name = "highPriorityButtonEdit";
+            this.highPriorityButtonEdit.Size = new System.Drawing.Size(76, 29);
+            this.highPriorityButtonEdit.TabIndex = 11;
+            this.highPriorityButtonEdit.Text = "High";
+            this.highPriorityButtonEdit.UseVisualStyleBackColor = true;
+            this.highPriorityButtonEdit.Click += new System.EventHandler(this.highPriorityButtonEdit_Click);
+            // 
+            // mediumPriorityButtonEdit
+            // 
+            this.mediumPriorityButtonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediumPriorityButtonEdit.Location = new System.Drawing.Point(269, 148);
+            this.mediumPriorityButtonEdit.Name = "mediumPriorityButtonEdit";
+            this.mediumPriorityButtonEdit.Size = new System.Drawing.Size(95, 29);
+            this.mediumPriorityButtonEdit.TabIndex = 10;
+            this.mediumPriorityButtonEdit.Text = "Medium";
+            this.mediumPriorityButtonEdit.UseVisualStyleBackColor = true;
+            this.mediumPriorityButtonEdit.Click += new System.EventHandler(this.mediumPriorityButtonEdit_Click);
+            // 
+            // zz
+            // 
+            this.zz.BackColor = System.Drawing.Color.RoyalBlue;
+            this.zz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zz.ForeColor = System.Drawing.Color.White;
+            this.zz.Location = new System.Drawing.Point(304, 237);
+            this.zz.Name = "zz";
+            this.zz.Size = new System.Drawing.Size(135, 33);
+            this.zz.TabIndex = 4;
+            this.zz.Text = "EDIT";
+            this.zz.UseVisualStyleBackColor = false;
+            this.zz.Click += new System.EventHandler(this.zz_Click);
+            // 
+            // lowPriorityButtonEdit
+            // 
+            this.lowPriorityButtonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lowPriorityButtonEdit.Location = new System.Drawing.Point(168, 148);
+            this.lowPriorityButtonEdit.Name = "lowPriorityButtonEdit";
+            this.lowPriorityButtonEdit.Size = new System.Drawing.Size(95, 29);
+            this.lowPriorityButtonEdit.TabIndex = 9;
+            this.lowPriorityButtonEdit.Text = "Low";
+            this.lowPriorityButtonEdit.UseVisualStyleBackColor = true;
+            this.lowPriorityButtonEdit.Click += new System.EventHandler(this.lowPriorityButtonEdit_Click);
+            // 
+            // editStatusComboBox
+            // 
+            this.editStatusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.editStatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editStatusComboBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.editStatusComboBox.FormattingEnabled = true;
+            this.editStatusComboBox.Items.AddRange(new object[] {
+            "Ongoing",
+            "Missed ",
+            "Complete"});
+            this.editStatusComboBox.Location = new System.Drawing.Point(168, 201);
+            this.editStatusComboBox.Name = "editStatusComboBox";
+            this.editStatusComboBox.Size = new System.Drawing.Size(249, 24);
+            this.editStatusComboBox.TabIndex = 8;
+            // 
+            // editTitleTextBox
+            // 
+            this.editTitleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editTitleTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.editTitleTextBox.Location = new System.Drawing.Point(168, 53);
+            this.editTitleTextBox.Name = "editTitleTextBox";
+            this.editTitleTextBox.Size = new System.Drawing.Size(278, 22);
+            this.editTitleTextBox.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(165, 181);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 16);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "STATUS:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(165, 35);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(87, 16);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "TASK NAME:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(166, 11);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(97, 18);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "EDIT TASK ";
             // 
             // createTaskPanel
             // 
@@ -103,7 +285,7 @@
             this.createTaskPanel.Controls.Add(this.label8);
             this.createTaskPanel.Enabled = false;
             this.createTaskPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createTaskPanel.Location = new System.Drawing.Point(0, 0);
+            this.createTaskPanel.Location = new System.Drawing.Point(13, 216);
             this.createTaskPanel.Name = "createTaskPanel";
             this.createTaskPanel.Size = new System.Drawing.Size(589, 277);
             this.createTaskPanel.TabIndex = 6;
@@ -476,10 +658,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tasksPanel);
+            this.Controls.Add(this.createTaskPanel);
+            this.Controls.Add(this.editTaskPanel);
             this.Name = "tasksControl";
             this.Size = new System.Drawing.Size(619, 616);
             this.taskListPanel.ResumeLayout(false);
             this.taskListPanel.PerformLayout();
+            this.editTaskPanel.ResumeLayout(false);
+            this.editTaskPanel.PerformLayout();
             this.createTaskPanel.ResumeLayout(false);
             this.createTaskPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.taskListPicture)).EndInit();
@@ -530,5 +716,19 @@
         private System.Windows.Forms.ComboBox statusComboBox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button cancelSearchButton;
+        public System.Windows.Forms.Panel editTaskPanel;
+        public System.Windows.Forms.DateTimePicker editPanelDateTimePicker;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button buttonCancelEdit;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button highPriorityButtonEdit;
+        private System.Windows.Forms.Button mediumPriorityButtonEdit;
+        private System.Windows.Forms.Button zz;
+        private System.Windows.Forms.Button lowPriorityButtonEdit;
+        private System.Windows.Forms.ComboBox editStatusComboBox;
+        private System.Windows.Forms.TextBox editTitleTextBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }

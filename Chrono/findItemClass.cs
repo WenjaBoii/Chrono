@@ -38,7 +38,7 @@ namespace Chrono
             }
         }
         public static void setVisibility<T>(LinkedList<T> tasksList, Predicate<T> matchedItem, bool isVisibleState)
-            where T : taskItem
+            where T : taskItemGraphics
         {
             foreach (var item in tasksList)
             {
@@ -52,7 +52,7 @@ namespace Chrono
 
         }   
         public static void showItem<T>(LinkedList<T> tasksList)
-            where T : taskItem  
+            where T : taskItemGraphics  
         {
             foreach (var item in tasksList)
             {
