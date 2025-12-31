@@ -53,6 +53,7 @@
     <Compile Include="dashBoardControl.Designer.cs">
       <DependentUpon>dashBoardControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="findItemClass.cs" />
     <Compile Include="focusTimerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

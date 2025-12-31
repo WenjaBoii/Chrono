@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,23 +11,29 @@ using System.Windows.Forms;
 
 namespace Chrono
 {
-    public partial class taskItem : UserControl
+    public partial class taskItemGraphics : UserControl
     {
-        public taskItem()
+        public taskItemGraphics()
         {
             InitializeComponent();
         }
 
+        tasksControl parentPanel = Application.OpenForms.OfType<tasksControl>().FirstOrDefault();
+
+        public event EventHandler ClickRequest;   
+        public event EventHandler ClickCancel;  
+
+
         public string TaskTitle
         {
             get { return titleLabel.Text; }
-            set { titleLabel.Text = value; }
+             set { titleLabel.Text = value; }
         }
 
         public string TaskStatus
         {
             get { return statusLabel.Text; }
-            set { statusLabel.Text = value; }
+             set { statusLabel.Text = value; }
         }
 
         public DateTime deadline
@@ -44,7 +51,7 @@ namespace Chrono
                     return DateTime.MinValue;
                 }
             }
-            set
+         set
             {
        
                 deadlineText.Text = value.ToString("MM/dd/yyyy");
@@ -53,7 +60,32 @@ namespace Chrono
         public string TaskPriority
         {
             get { return deadLineTxt.Text; }
-            set { deadLineTxt.Text = value; }
-        }   
+             set { deadLineTxt.Text = value; }
+        }
+
+        public bool isVisibile { get; set; } = true;  
+          
+
+        public taskItemGraphics(string taskName, string status, DateTime deadline, string priority)
+        {
+            InitializeComponent();
+
+            TaskTitle = taskName;
+            TaskStatus = status;
+            this.deadline = deadline;
+            TaskPriority = priority;
+        }
+        
+        private void deleteButtonTaskItem_Click(object sender, EventArgs e)
+        {
+            this.DestroyHandle();   
+            ClickCancel?.Invoke(this, EventArgs.Empty); 
+        }
+
+        private void taskItemEditButton_Click(object sender, EventArgs e)
+        {   
+           ClickRequest?.Invoke(this, EventArgs.Empty);  
+           
+        }
     }
 }
