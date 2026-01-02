@@ -16,7 +16,20 @@ namespace Chrono
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            if (!DatabaseHelper.TestConnection())
+            {
+                MessageBox.Show(
+                    "Cannot connect to the database.\nPlease check VPN or server.",
+                    "Database Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+                return; // ❌ stop app
+            }
+
             Application.Run(new Form1());
         }
+        }
     }
-}
+
