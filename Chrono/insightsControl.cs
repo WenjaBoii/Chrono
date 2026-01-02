@@ -65,7 +65,8 @@ namespace Chrono
 
                     completionrateNumber.Text = completionRate.ToString("0") + "%";
 
-                    if (completionRate >= 80) // for ui design that corresponds to rate 
+                    // for ui design that corresponds to rate 
+                    if (completionRate >= 80)
                        completionrateNumber.ForeColor = Color.Green;
                     else if (completionRate >= 50)
                         completionrateNumber.ForeColor = Color.Orange;
