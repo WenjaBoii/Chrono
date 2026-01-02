@@ -139,7 +139,6 @@
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.LightCyan;
-            this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel20.Controls.Add(this.mostproductiveDay);
             this.panel20.Controls.Add(this.mostproductivedayLabel);
             this.panel20.Location = new System.Drawing.Point(16, 82);
@@ -170,8 +169,8 @@
             // 
             // buttonWeek
             // 
-            this.buttonWeek.BackColor = System.Drawing.Color.Black;
-            this.buttonWeek.ForeColor = System.Drawing.Color.White;
+            this.buttonWeek.BackColor = System.Drawing.Color.White;
+            this.buttonWeek.ForeColor = System.Drawing.Color.Black;
             this.buttonWeek.Location = new System.Drawing.Point(13, 41);
             this.buttonWeek.Margin = new System.Windows.Forms.Padding(4);
             this.buttonWeek.Name = "buttonWeek";
