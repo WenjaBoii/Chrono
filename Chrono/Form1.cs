@@ -50,7 +50,7 @@ namespace Chrono
                     break;
                 case 6: 
                     pagePanel.Controls.Clear();
-                    pagePanel.Controls.Add(new insightsControl() { Dock = DockStyle.Fill });
+                    pagePanel.Controls.Add(new InsightsControl() { Dock = DockStyle.Fill });
                     break;  
                 default:
                     pagePanel.Controls.Clear(); 
@@ -136,6 +136,11 @@ namespace Chrono
         private void insightsNavButton_Click(object sender, EventArgs e)
         {
             changePage(6);
+        }
+
+        private void pagePanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
