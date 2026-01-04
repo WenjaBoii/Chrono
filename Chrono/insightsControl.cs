@@ -33,54 +33,55 @@ namespace Chrono
                 using (var conn = DatabaseHelper.GetConnection())
                 {
                     conn.Open();
-                    var cmd = new MySqlCommand("SELECT COUNT(*) FROM tasks", conn); // query show total tasks in db
-                    int totalTasks = Convert.ToInt32(cmd.ExecuteScalar());
 
+                    // totals tasks 
+                    var totalCmd = new MySqlCommand(
+                        "SELECT COUNT(*) FROM tasks WHERE user_id = @userId", conn);
+                    totalCmd.Parameters.AddWithValue("@userId", _currentUserId);
+                    int totalTasks = Convert.ToInt32(totalCmd.ExecuteScalar());
                     totalTaskNumber.Text = totalTasks.ToString();
 
-                    var completedCmd =
-                    new MySqlCommand(
-                    "SELECT COUNT(*) FROM tasks WHERE status = 'completed'", conn); // query to show completed tasks in db
-
-                    int completedTasks =
-                        Convert.ToInt32(completedCmd.ExecuteScalar());
-
+                    // completed tasks
+                    var completedCmd = new MySqlCommand(
+                        "SELECT COUNT(*) FROM tasks WHERE status = 'completed' AND user_id = @userId", conn);
+                    completedCmd.Parameters.AddWithValue("@userId", _currentUserId);
+                    int completedTasks = Convert.ToInt32(completedCmd.ExecuteScalar());
                     completedNumber.Text = completedTasks.ToString();
 
-                    var missedCmd = new MySqlCommand(
-                        @"SELECT COUNT(*) 
-                        FROM tasks
-                        WHERE deadline < CURDATE()
-                        AND status != 'completed'", conn); // query to show missed tasks from db
 
+                    // missed tasks 
+                    var missedCmd = new MySqlCommand(
+                        @"SELECT COUNT(*) FROM tasks
+                        WHERE deadline < CURDATE()
+                        AND status != 'completed'
+                        AND user_id = @userId", conn);
+                    missedCmd.Parameters.AddWithValue("@userId", _currentUserId);
                     int missedTasks = Convert.ToInt32(missedCmd.ExecuteScalar());
                     missedTaskNumber.Text = missedTasks.ToString();
 
                     double completionRate = 0;
-
                     if (totalTasks > 0)
                     {
-                        completionRate = (double)totalTasks / completedTasks * 100; // formula for completion rate 
+                        completionRate = (completedTasks / (double)totalTasks) * 100; // formula for completion rate
                     }
 
-                    completionrateNumber.Text = completionRate.ToString("0") + "%";
+                    completionrateNumber.Text = $"{Math.Round(completionRate)}%";
+                    completedPercent.Text = $"{Math.Round(completionRate)}% of all tasks";
 
-                    // for ui design that corresponds to rate 
                     if (completionRate >= 80)
-                       completionrateNumber.ForeColor = Color.Green;
+                        completionrateNumber.ForeColor = Color.Green;
                     else if (completionRate >= 50)
                         completionrateNumber.ForeColor = Color.Orange;
                     else
                         completionrateNumber.ForeColor = Color.Red;
-
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Database error: " + ex.Message);
             }
-
         }
+
 
         public class ProductivityHighlights
         {
@@ -233,7 +234,8 @@ namespace Chrono
 
         private void buttonWeek_Click(object sender, EventArgs e)
         {
-            
+            var insights = GetProductivityHighlights(CurrentUserId, "week");
+            DisplayInsights(insights);
         }
 
         private void mostproductiveDay_Click(object sender, EventArgs e)
