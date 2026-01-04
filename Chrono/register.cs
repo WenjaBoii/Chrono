@@ -16,5 +16,17 @@ namespace Chrono
         {
             InitializeComponent();
         }
+
+        private void linktoLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SwitchToLogin?.Invoke(this, EventArgs.Empty);
+        }
+
+        public event EventHandler SwitchToLogin;
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

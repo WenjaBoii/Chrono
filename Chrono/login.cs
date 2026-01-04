@@ -16,5 +16,24 @@ namespace Chrono
         {
             InitializeComponent();
         }
+
+        private void linktoRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            SwitchToRegister?.Invoke(this, EventArgs.Empty);
+        }
+
+        public event EventHandler SwitchToRegister;
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

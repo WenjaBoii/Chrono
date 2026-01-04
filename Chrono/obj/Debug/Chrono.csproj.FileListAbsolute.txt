@@ -19,3 +19,23 @@ D:\VS COMMUNITY GITHUB\Chrono\obj\Debug\Chrono.exe.config
 D:\VS COMMUNITY GITHUB\Chrono\obj\Debug\Chrono.accountForm.resources
 D:\VS COMMUNITY GITHUB\Chrono\obj\Debug\Chrono.register.resources
 D:\VS COMMUNITY GITHUB\Chrono\obj\Debug\Chrono.login.resources
+C:\Users\villa\source\repos\Chrono\Chrono\bin\Debug\Chrono.exe.config
+C:\Users\villa\source\repos\Chrono\Chrono\bin\Debug\Chrono.exe
+C:\Users\villa\source\repos\Chrono\Chrono\bin\Debug\Chrono.pdb
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.csproj.AssemblyReference.cache
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.accountForm.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.dashBoardControl.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.focusTimerControl.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.Form1.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.insightsControl.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.login.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.prioritiesControl.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.Properties.Resources.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.register.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.taskItem.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.tasksControl.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.tipsContro_.resources
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.csproj.GenerateResource.cache
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.csproj.CoreCompileInputs.cache
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.exe
+C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.pdb

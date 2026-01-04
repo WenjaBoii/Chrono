@@ -32,6 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.register1 = new Chrono.register();
+            this.login1 = new Chrono.login();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -59,6 +62,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.login1);
+            this.panel1.Controls.Add(this.register1);
             this.panel1.Location = new System.Drawing.Point(330, 112);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 537);
@@ -75,6 +80,26 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "O";
             // 
+            // register1
+            // 
+            this.register1.BackColor = System.Drawing.Color.GhostWhite;
+            this.register1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.register1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.register1.Location = new System.Drawing.Point(0, 0);
+            this.register1.Name = "register1";
+            this.register1.Size = new System.Drawing.Size(450, 537);
+            this.register1.TabIndex = 0;
+            // 
+            // login1
+            // 
+            this.login1.BackColor = System.Drawing.Color.GhostWhite;
+            this.login1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.login1.Location = new System.Drawing.Point(0, 0);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(450, 537);
+            this.login1.TabIndex = 1;
+            this.login1.Load += new System.EventHandler(this.login1_Load);
+            // 
             // accountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -87,6 +112,7 @@
             this.Controls.Add(this.label3);
             this.Name = "accountForm";
             this.Text = "accountForm";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,5 +124,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
+        private register register1;
+        private login login1;
     }
 }
