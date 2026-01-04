@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.confirmpasswordField = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.passwordField = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emailField = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.usernameField = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,14 +58,16 @@
             this.button1.TabIndex = 25;
             this.button1.Text = "Create account";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox4
+            // confirmpasswordField
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.textBox4.Location = new System.Drawing.Point(24, 327);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(353, 24);
-            this.textBox4.TabIndex = 24;
+            this.confirmpasswordField.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.confirmpasswordField.Location = new System.Drawing.Point(24, 327);
+            this.confirmpasswordField.Name = "confirmpasswordField";
+            this.confirmpasswordField.Size = new System.Drawing.Size(353, 24);
+            this.confirmpasswordField.TabIndex = 24;
+            this.confirmpasswordField.UseSystemPasswordChar = true;
             // 
             // label8
             // 
@@ -79,13 +81,14 @@
             this.label8.Text = "Confirm Password";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox3
+            // passwordField
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.textBox3.Location = new System.Drawing.Point(24, 260);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(353, 24);
-            this.textBox3.TabIndex = 22;
+            this.passwordField.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.passwordField.Location = new System.Drawing.Point(24, 260);
+            this.passwordField.Name = "passwordField";
+            this.passwordField.Size = new System.Drawing.Size(353, 24);
+            this.passwordField.TabIndex = 22;
+            this.passwordField.UseSystemPasswordChar = true;
             // 
             // label7
             // 
@@ -99,13 +102,13 @@
             this.label7.Text = "Password";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox2
+            // emailField
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.textBox2.Location = new System.Drawing.Point(24, 193);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(353, 24);
-            this.textBox2.TabIndex = 20;
+            this.emailField.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.emailField.Location = new System.Drawing.Point(24, 193);
+            this.emailField.Name = "emailField";
+            this.emailField.Size = new System.Drawing.Size(353, 24);
+            this.emailField.TabIndex = 20;
             // 
             // label6
             // 
@@ -119,13 +122,13 @@
             this.label6.Text = "Email";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // usernameField
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.textBox1.Location = new System.Drawing.Point(24, 126);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(353, 24);
-            this.textBox1.TabIndex = 18;
+            this.usernameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.usernameField.Location = new System.Drawing.Point(24, 126);
+            this.usernameField.Name = "usernameField";
+            this.usernameField.Size = new System.Drawing.Size(353, 24);
+            this.usernameField.TabIndex = 18;
             // 
             // label5
             // 
@@ -207,17 +210,18 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.usernameField);
+            this.panel1.Controls.Add(this.confirmpasswordField);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.emailField);
+            this.panel1.Controls.Add(this.passwordField);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(24, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 500);
             this.panel1.TabIndex = 29;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label9
             // 
@@ -250,13 +254,13 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox confirmpasswordField;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox passwordField;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox emailField;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox usernameField;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
