@@ -16,6 +16,7 @@ namespace Chrono
         public Form1()
         {
             InitializeComponent();
+ 
         }
 
         public void changePage(int pageNumber)
