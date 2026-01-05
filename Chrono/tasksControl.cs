@@ -28,6 +28,7 @@ namespace Chrono
 
         LinkedList<taskItemGraphics> tasksList = new LinkedList<taskItemGraphics>();
         private taskItemGraphics currentlyEditingTask;
+        private taskItemGraphics currentlyDeletingTask;
 
         public bool editTaskPanelVisibleStatus
         {
@@ -89,6 +90,8 @@ namespace Chrono
         }
       public void onTaskItemRequestCancel(object sender, EventArgs e)
         {
+            currentlyDeletingTask = sender as taskItemGraphics; 
+
             this.editTaskPanel.Visible = false;
             this.taskListFlowLayout.Visible = false;
             this.tasksPanel.Visible = true;
@@ -96,6 +99,8 @@ namespace Chrono
             this.taskListPanel.Visible = true;
             this.taskListPanel.BringToFront();   
             editTitleTextBox.Clear();
+
+            currentlyDeletingTask.Dispose();    
         }   
 
         public void onTaskItemRequestEdit(object sender, EventArgs e)

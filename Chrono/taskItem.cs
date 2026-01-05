@@ -77,8 +77,7 @@ namespace Chrono
         }
         
         private void deleteButtonTaskItem_Click(object sender, EventArgs e)
-        {
-            this.DestroyHandle();   
+        { 
             ClickCancel?.Invoke(this, EventArgs.Empty); 
         }
 
