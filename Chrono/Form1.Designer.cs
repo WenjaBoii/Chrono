@@ -38,14 +38,9 @@
             this.chronoLogo = new System.Windows.Forms.PictureBox();
             this.sideBarMotto = new System.Windows.Forms.Label();
             this.sideBarTitle = new System.Windows.Forms.Label();
-            this.proTipContainer = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.proTipPanel = new System.Windows.Forms.Panel();
             this.pagePanel = new System.Windows.Forms.Panel();
             this.sideBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chronoLogo)).BeginInit();
-            this.proTipContainer.SuspendLayout();
-            this.proTipPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideBarPanel
@@ -212,7 +207,6 @@
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1104, 816);
             this.Controls.Add(this.pagePanel);
-            this.Controls.Add(this.proTipPanel);
             this.Controls.Add(this.sideBarPanel);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
@@ -221,9 +215,6 @@
             this.sideBarPanel.ResumeLayout(false);
             this.sideBarPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chronoLogo)).EndInit();
-            this.proTipContainer.ResumeLayout(false);
-            this.proTipContainer.PerformLayout();
-            this.proTipPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -239,9 +230,6 @@
         private System.Windows.Forms.Button priorityNavButton;
         private System.Windows.Forms.Button dashBoardNavButton;
         private System.Windows.Forms.PictureBox chronoLogo;
-        private System.Windows.Forms.Panel proTipContainer;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel proTipPanel;
         public System.Windows.Forms.Button taskNavButton;
         private System.Windows.Forms.Panel pagePanel;
     }
