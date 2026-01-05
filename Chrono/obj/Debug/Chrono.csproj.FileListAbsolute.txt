@@ -39,3 +39,24 @@ C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.csproj.GenerateResour
 C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.csproj.CoreCompileInputs.cache
 C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.exe
 C:\Users\villa\source\repos\Chrono\Chrono\obj\Debug\Chrono.pdb
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\bin\Debug\Chrono.exe.config
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\bin\Debug\Chrono.exe
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\bin\Debug\Chrono.pdb
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.csproj.AssemblyReference.cache
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.exe.config
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.accountForm.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.dashBoardControl.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.focusTimerControl.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.Form1.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.insightsControl.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.login.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.prioritiesControl.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.Properties.Resources.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.register.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.taskItem.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.tasksControl.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.tipsContro_.resources
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.csproj.GenerateResource.cache
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.csproj.CoreCompileInputs.cache
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.exe
+D:\CvsuShit\DCIT 24 - 2nd Year\Chrono\Chrono\obj\Debug\Chrono.pdb
