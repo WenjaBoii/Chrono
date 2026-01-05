@@ -42,8 +42,6 @@ namespace Chrono
             }
         }
 
-
-
         public void checkIfNull()
         {
             if (titleTextBox == null || setPriority == null ||
