@@ -12,26 +12,19 @@ namespace Chrono
 {
     public partial class prioritiesControl : UserControl
     {
-        private tasksControl _actualSource;
+        private taskItemGraphics sourceTask;
+        private static LinkedList<taskItemGraphics> copiedTaskList = new LinkedList<taskItemGraphics>();
 
         public prioritiesControl()
         {
             InitializeComponent();
+
         }
 
-        public void SetSource(tasksControl source)
+        public taskItemGraphics setSource
         {
-            _actualSource = source;
-        }
-
-        protected override void OnVisibleChanged(EventArgs e)
-        {
-            base.OnVisibleChanged(e);
-
-            if (this.Visible && _actualSource != null)
-            {
-                RefreshPriorityTask();
-            }
+            get { return sourceTask; }
+            set { sourceTask = value; }
         }
 
         public void RefreshPriorityTask()
@@ -41,32 +34,23 @@ namespace Chrono
 
             if (_actualSource == null) return;
 
-            urgentTaskList.SuspendLayout();
             urgentTaskList.Controls.Clear();
 
-            DateTime limit = DateTime.Now.AddHours(24);
+            taskItemGraphics copiedTask = new taskItemGraphics(sourceTask.TaskTitle, sourceTask.TaskStatus, sourceTask.deadline, sourceTask.TaskStatus);
 
+            copiedTaskList.AddFirst(copiedTask);
 
-            foreach (var task in _actualSource.allTask)
+            foreach (var task in copiedTaskList)
             {
                 if (task.deadline <= DateTime.Now.AddDays(1))
                 {
-                    taskItemGraphics copiedTask = new taskItemGraphics(
-
-                        task.TaskTitle,
-                        task.TaskStatus,
-                        task.deadline,
-                        task.TaskPriority
-                     
-                        );
-
-
-                    urgentTaskList.Controls.Add(copiedTask);
+                    urgentTaskList.Controls.Add(task);
                 }
             }
+
             urgentTaskList.BringToFront();
-            urgentTaskList.ResumeLayout(true); 
-            urgentTaskList.PerformLayout();    
+            urgentTaskList.ResumeLayout(true);
+            urgentTaskList.PerformLayout();
             urgentTaskList.Invalidate();
         }
     }

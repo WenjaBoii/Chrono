@@ -25,9 +25,9 @@ namespace Chrono
         string editPriority;
         string dateTime;
 
-        LinkedList<taskItemGraphics> tasksList = new LinkedList<taskItemGraphics>();
-        public LinkedList<taskItemGraphics> allTask => tasksList;
-        taskItemGraphics newTask;
+       public LinkedList<taskItemGraphics> tasksList = new LinkedList<taskItemGraphics>();
+      public prioritiesControl LinkedPrioritiesControl { get; set; }
+      
 
         private taskItemGraphics currentlyEditingTask;
         private taskItemGraphics currentlyDeletingTask;
@@ -44,12 +44,6 @@ namespace Chrono
             }
         }
 
-        public taskItemGraphics NewTask
-        {
-            get { return newTask; }
-            set { newTask = value; }
-        }
-
         public void checkIfNull()
         {
             if (titleTextBox == null || setPriority == null ||
@@ -63,9 +57,10 @@ namespace Chrono
             }
         }
 
+        
         public void createTask()
         {
-            newTask = new taskItemGraphics(titleTextBox.Text, statusComboBox.Text,
+            taskItemGraphics newTask = new taskItemGraphics(titleTextBox.Text, statusComboBox.Text,
                                             dateTimeDropdownBox.Value, setPriority);
 
             newTask.ClickRequest += onTaskItemRequestEdit;
@@ -182,6 +177,12 @@ namespace Chrono
         public void buttonCreateTask_Click_1(object sender, EventArgs e)
         {
             createTask();
+            if (LinkedPrioritiesControl != null)
+            {
+
+                LinkedPrioritiesControl.setSource = tasksList.First.Value;
+                LinkedPrioritiesControl.RefreshPriorityTask();
+            }
         }
 
         private void buttonAddTaskCancel_Click(object sender, EventArgs e)
@@ -269,7 +270,6 @@ namespace Chrono
             editPriority = "High";
         }
 
-        // Dashboard Integration Methods
         public int GetTaskCount()
         {
             return tasksList.Count;
