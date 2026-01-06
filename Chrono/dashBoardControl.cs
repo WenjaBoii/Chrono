@@ -21,18 +21,29 @@ namespace Chrono
         {
             RefreshDashboard();
         }
-        private void RefreshDashboard()
+        public void RefreshDashboard()
         {
-            int totalTasks = 0;
-            int completedTasks = 0;
-            int pendingTasks = 0;
-            int inProgressTasks = 0;
+            var mainForm = this.FindForm();
+            if (mainForm != null)
+            {
+                var tasksCtrl = mainForm.Controls.Find("tasksControl1", true).FirstOrDefault() as tasksControl;
+                if (tasksCtrl != null)
+                {
+                    int total = tasksCtrl.GetTaskCount();
+                    int completed = tasksCtrl.GetCompletedCount();
+                    int pending = tasksCtrl.GetPendingCount();
+                    int missed = tasksCtrl.GetMissedCount();
+                    double rate = tasksCtrl.GetCompletionRate();
 
-            SetLabel("lblTotalTasks", totalTasks.ToString());
-            SetLabel("lblCompleted", completedTasks.ToString());
-            SetLabel("lblPending", pendingTasks.ToString());
-            SetLabel("lblInProgress", inProgressTasks.ToString());
+                    SetLabel("label6", total.ToString());
+                    SetLabel("label7", completed.ToString());
+                    SetLabel("label9", pending.ToString());
+                    SetLabel("label11", missed.ToString());
+                    SetLabel("label23", $"{rate:F0}%");
+                }
+            }
         }
+
 
         private void SetLabel(string name, string value)
         {

@@ -265,6 +265,50 @@ namespace Chrono
             editPriority = "High";
         }
 
-        
+        public int GetTaskCount()
+        {
+            return tasksList.Count;
+        }
+
+        public int GetCompletedCount()
+        {
+            return tasksList.Count(t => t.TaskStatus.Equals("Completed", StringComparison.OrdinalIgnoreCase));
+        }
+
+        public int GetPendingCount()
+        {
+            return tasksList.Count(t => t.TaskStatus.Equals("In Progress", StringComparison.OrdinalIgnoreCase) ||
+                                         t.TaskStatus.Equals("Pending", StringComparison.OrdinalIgnoreCase) ||
+                                         t.TaskStatus.Equals("To Do", StringComparison.OrdinalIgnoreCase));
+        }
+
+        public int GetMissedCount()
+        {
+            return tasksList.Count(t => t.deadline < DateTime.Now &&
+                                        !t.TaskStatus.Equals("Completed", StringComparison.OrdinalIgnoreCase));
+        }
+
+        public double GetCompletionRate()
+        {
+            int total = GetTaskCount();
+            if (total == 0) return 0;
+
+            int completed = GetCompletedCount();
+            return (completed / (double)total) * 100;
+        }
+
+        private void RefreshDashboard()
+        {
+            var mainForm = this.FindForm();
+            if (mainForm != null)
+            {
+                var dashboardCtrl = mainForm.Controls.Find("dashBoardControl1", true).FirstOrDefault() as dashBoardControl;
+                if (dashboardCtrl != null)
+                {
+                    dashboardCtrl.RefreshDashboard();
+                }
+            }
+        }
+
     }
 }
