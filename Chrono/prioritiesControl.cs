@@ -69,5 +69,10 @@ namespace Chrono
             urgentTaskList.PerformLayout();    
             urgentTaskList.Invalidate();
         }
+
+        private void urgentTaskHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

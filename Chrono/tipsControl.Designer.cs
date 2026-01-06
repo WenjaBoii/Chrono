@@ -88,6 +88,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(395, 210);
             this.panel8.TabIndex = 3;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint_1);
             // 
             // panel7
             // 

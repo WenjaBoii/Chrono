@@ -99,5 +99,10 @@ namespace Chrono
         {
 
         }
+
+        private void panel8_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

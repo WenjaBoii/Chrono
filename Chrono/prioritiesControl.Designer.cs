@@ -72,9 +72,10 @@
             this.priorityPanel.Controls.Add(this.upcomingTaskPanel);
             this.priorityPanel.Controls.Add(this.urgentTaskPanel);
             this.priorityPanel.Controls.Add(this.priorityDashboardHeaderPanel);
-            this.priorityPanel.Location = new System.Drawing.Point(3, 3);
+            this.priorityPanel.Location = new System.Drawing.Point(4, 4);
+            this.priorityPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.priorityPanel.Name = "priorityPanel";
-            this.priorityPanel.Size = new System.Drawing.Size(656, 682);
+            this.priorityPanel.Size = new System.Drawing.Size(875, 839);
             this.priorityPanel.TabIndex = 22;
             // 
             // priorityColorGuidePanel
@@ -84,16 +85,18 @@
             this.priorityColorGuidePanel.Controls.Add(this.mediumPriorityText);
             this.priorityColorGuidePanel.Controls.Add(this.highPriorityText);
             this.priorityColorGuidePanel.Controls.Add(this.label16);
-            this.priorityColorGuidePanel.Location = new System.Drawing.Point(13, 597);
+            this.priorityColorGuidePanel.Location = new System.Drawing.Point(17, 735);
+            this.priorityColorGuidePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.priorityColorGuidePanel.Name = "priorityColorGuidePanel";
-            this.priorityColorGuidePanel.Size = new System.Drawing.Size(583, 73);
+            this.priorityColorGuidePanel.Size = new System.Drawing.Size(777, 90);
             this.priorityColorGuidePanel.TabIndex = 7;
             // 
             // lowPriorityText
             // 
             this.lowPriorityText.AutoSize = true;
             this.lowPriorityText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lowPriorityText.Location = new System.Drawing.Point(439, 41);
+            this.lowPriorityText.Location = new System.Drawing.Point(585, 50);
+            this.lowPriorityText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lowPriorityText.Name = "lowPriorityText";
             this.lowPriorityText.Size = new System.Drawing.Size(73, 15);
             this.lowPriorityText.TabIndex = 3;
@@ -103,7 +106,8 @@
             // 
             this.mediumPriorityText.AutoSize = true;
             this.mediumPriorityText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mediumPriorityText.Location = new System.Drawing.Point(228, 41);
+            this.mediumPriorityText.Location = new System.Drawing.Point(304, 50);
+            this.mediumPriorityText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mediumPriorityText.Name = "mediumPriorityText";
             this.mediumPriorityText.Size = new System.Drawing.Size(96, 15);
             this.mediumPriorityText.TabIndex = 2;
@@ -113,7 +117,8 @@
             // 
             this.highPriorityText.AutoSize = true;
             this.highPriorityText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highPriorityText.Location = new System.Drawing.Point(59, 41);
+            this.highPriorityText.Location = new System.Drawing.Point(79, 50);
+            this.highPriorityText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.highPriorityText.Name = "highPriorityText";
             this.highPriorityText.Size = new System.Drawing.Size(76, 15);
             this.highPriorityText.TabIndex = 1;
@@ -123,7 +128,8 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(14, 11);
+            this.label16.Location = new System.Drawing.Point(19, 14);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(142, 16);
             this.label16.TabIndex = 0;
@@ -136,9 +142,10 @@
             this.upcomingTaskPanel.Controls.Add(this.pictureBox3);
             this.upcomingTaskPanel.Controls.Add(this.flowLayoutPanel2);
             this.upcomingTaskPanel.Controls.Add(this.upcomingTaskHeader);
-            this.upcomingTaskPanel.Location = new System.Drawing.Point(12, 306);
+            this.upcomingTaskPanel.Location = new System.Drawing.Point(16, 377);
+            this.upcomingTaskPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.upcomingTaskPanel.Name = "upcomingTaskPanel";
-            this.upcomingTaskPanel.Size = new System.Drawing.Size(584, 278);
+            this.upcomingTaskPanel.Size = new System.Drawing.Size(779, 342);
             this.upcomingTaskPanel.TabIndex = 6;
             // 
             // upcomingTaskBodyInfo
@@ -147,7 +154,8 @@
             this.upcomingTaskBodyInfo.BackColor = System.Drawing.Color.White;
             this.upcomingTaskBodyInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upcomingTaskBodyInfo.ForeColor = System.Drawing.Color.Black;
-            this.upcomingTaskBodyInfo.Location = new System.Drawing.Point(196, 198);
+            this.upcomingTaskBodyInfo.Location = new System.Drawing.Point(261, 244);
+            this.upcomingTaskBodyInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.upcomingTaskBodyInfo.Name = "upcomingTaskBodyInfo";
             this.upcomingTaskBodyInfo.Size = new System.Drawing.Size(189, 16);
             this.upcomingTaskBodyInfo.TabIndex = 5;
@@ -155,9 +163,10 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(268, 143);
+            this.pictureBox3.Location = new System.Drawing.Point(357, 176);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox3.Size = new System.Drawing.Size(55, 44);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
@@ -165,9 +174,10 @@
             // 
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 68);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 84);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(580, 208);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(773, 256);
             this.flowLayoutPanel2.TabIndex = 6;
             // 
             // upcomingTaskHeader
@@ -177,8 +187,9 @@
             this.upcomingTaskHeader.Controls.Add(this.pictureBox4);
             this.upcomingTaskHeader.Controls.Add(this.upcomingTaskText);
             this.upcomingTaskHeader.Location = new System.Drawing.Point(1, 0);
+            this.upcomingTaskHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.upcomingTaskHeader.Name = "upcomingTaskHeader";
-            this.upcomingTaskHeader.Size = new System.Drawing.Size(584, 68);
+            this.upcomingTaskHeader.Size = new System.Drawing.Size(779, 84);
             this.upcomingTaskHeader.TabIndex = 2;
             // 
             // upcomingTaskInfoText
@@ -187,7 +198,8 @@
             this.upcomingTaskInfoText.BackColor = System.Drawing.Color.Goldenrod;
             this.upcomingTaskInfoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upcomingTaskInfoText.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.upcomingTaskInfoText.Location = new System.Drawing.Point(62, 37);
+            this.upcomingTaskInfoText.Location = new System.Drawing.Point(83, 46);
+            this.upcomingTaskInfoText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.upcomingTaskInfoText.Name = "upcomingTaskInfoText";
             this.upcomingTaskInfoText.Size = new System.Drawing.Size(110, 16);
             this.upcomingTaskInfoText.TabIndex = 4;
@@ -196,9 +208,10 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Goldenrod;
-            this.pictureBox4.Location = new System.Drawing.Point(10, 9);
+            this.pictureBox4.Location = new System.Drawing.Point(13, 11);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(44, 40);
+            this.pictureBox4.Size = new System.Drawing.Size(59, 49);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
@@ -208,7 +221,8 @@
             this.upcomingTaskText.BackColor = System.Drawing.Color.Goldenrod;
             this.upcomingTaskText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upcomingTaskText.ForeColor = System.Drawing.Color.White;
-            this.upcomingTaskText.Location = new System.Drawing.Point(60, 9);
+            this.upcomingTaskText.Location = new System.Drawing.Point(80, 11);
+            this.upcomingTaskText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.upcomingTaskText.Name = "upcomingTaskText";
             this.upcomingTaskText.Size = new System.Drawing.Size(151, 24);
             this.upcomingTaskText.TabIndex = 2;
@@ -221,16 +235,18 @@
             this.urgentTaskPanel.Controls.Add(this.urgentTaskBodyText);
             this.urgentTaskPanel.Controls.Add(this.urgentTaskHeader);
             this.urgentTaskPanel.Controls.Add(this.urgentTaskList);
-            this.urgentTaskPanel.Location = new System.Drawing.Point(11, 79);
+            this.urgentTaskPanel.Location = new System.Drawing.Point(15, 97);
+            this.urgentTaskPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.urgentTaskPanel.Name = "urgentTaskPanel";
-            this.urgentTaskPanel.Size = new System.Drawing.Size(642, 221);
+            this.urgentTaskPanel.Size = new System.Drawing.Size(856, 272);
             this.urgentTaskPanel.TabIndex = 1;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(311, 113);
+            this.pictureBox2.Location = new System.Drawing.Point(415, 139);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox2.Size = new System.Drawing.Size(55, 44);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
@@ -240,7 +256,8 @@
             this.urgentTaskBodyText.BackColor = System.Drawing.Color.White;
             this.urgentTaskBodyText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urgentTaskBodyText.ForeColor = System.Drawing.Color.Black;
-            this.urgentTaskBodyText.Location = new System.Drawing.Point(247, 169);
+            this.urgentTaskBodyText.Location = new System.Drawing.Point(329, 208);
+            this.urgentTaskBodyText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.urgentTaskBodyText.Name = "urgentTaskBodyText";
             this.urgentTaskBodyText.Size = new System.Drawing.Size(189, 16);
             this.urgentTaskBodyText.TabIndex = 5;
@@ -253,9 +270,11 @@
             this.urgentTaskHeader.Controls.Add(this.pictureBox1);
             this.urgentTaskHeader.Controls.Add(this.urgentTaskText);
             this.urgentTaskHeader.Location = new System.Drawing.Point(0, 0);
+            this.urgentTaskHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.urgentTaskHeader.Name = "urgentTaskHeader";
-            this.urgentTaskHeader.Size = new System.Drawing.Size(639, 62);
+            this.urgentTaskHeader.Size = new System.Drawing.Size(852, 76);
             this.urgentTaskHeader.TabIndex = 2;
+            this.urgentTaskHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.urgentTaskHeader_Paint);
             // 
             // urgentTaskInfoText
             // 
@@ -263,7 +282,8 @@
             this.urgentTaskInfoText.BackColor = System.Drawing.Color.Red;
             this.urgentTaskInfoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urgentTaskInfoText.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.urgentTaskInfoText.Location = new System.Drawing.Point(62, 34);
+            this.urgentTaskInfoText.Location = new System.Drawing.Point(83, 42);
+            this.urgentTaskInfoText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.urgentTaskInfoText.Name = "urgentTaskInfoText";
             this.urgentTaskInfoText.Size = new System.Drawing.Size(124, 16);
             this.urgentTaskInfoText.TabIndex = 4;
@@ -271,9 +291,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(10, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(59, 49);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -283,7 +304,8 @@
             this.urgentTaskText.BackColor = System.Drawing.Color.Red;
             this.urgentTaskText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urgentTaskText.ForeColor = System.Drawing.Color.White;
-            this.urgentTaskText.Location = new System.Drawing.Point(60, 7);
+            this.urgentTaskText.Location = new System.Drawing.Point(80, 9);
+            this.urgentTaskText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.urgentTaskText.Name = "urgentTaskText";
             this.urgentTaskText.Size = new System.Drawing.Size(120, 24);
             this.urgentTaskText.TabIndex = 2;
@@ -296,8 +318,9 @@
             this.urgentTaskList.BackColor = System.Drawing.Color.White;
             this.urgentTaskList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.urgentTaskList.Location = new System.Drawing.Point(0, 0);
+            this.urgentTaskList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.urgentTaskList.Name = "urgentTaskList";
-            this.urgentTaskList.Size = new System.Drawing.Size(642, 221);
+            this.urgentTaskList.Size = new System.Drawing.Size(856, 272);
             this.urgentTaskList.TabIndex = 5;
             // 
             // priorityDashboardHeaderPanel
@@ -305,9 +328,10 @@
             this.priorityDashboardHeaderPanel.BackColor = System.Drawing.Color.Transparent;
             this.priorityDashboardHeaderPanel.Controls.Add(this.priorityMessageText);
             this.priorityDashboardHeaderPanel.Controls.Add(this.priorityDashboardText);
-            this.priorityDashboardHeaderPanel.Location = new System.Drawing.Point(8, 12);
+            this.priorityDashboardHeaderPanel.Location = new System.Drawing.Point(11, 15);
+            this.priorityDashboardHeaderPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.priorityDashboardHeaderPanel.Name = "priorityDashboardHeaderPanel";
-            this.priorityDashboardHeaderPanel.Size = new System.Drawing.Size(645, 61);
+            this.priorityDashboardHeaderPanel.Size = new System.Drawing.Size(860, 75);
             this.priorityDashboardHeaderPanel.TabIndex = 0;
             // 
             // priorityMessageText
@@ -316,7 +340,8 @@
             this.priorityMessageText.BackColor = System.Drawing.Color.Transparent;
             this.priorityMessageText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priorityMessageText.ForeColor = System.Drawing.Color.Black;
-            this.priorityMessageText.Location = new System.Drawing.Point(6, 38);
+            this.priorityMessageText.Location = new System.Drawing.Point(8, 47);
+            this.priorityMessageText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.priorityMessageText.Name = "priorityMessageText";
             this.priorityMessageText.Size = new System.Drawing.Size(171, 16);
             this.priorityMessageText.TabIndex = 1;
@@ -327,7 +352,8 @@
             this.priorityDashboardText.AutoSize = true;
             this.priorityDashboardText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priorityDashboardText.ForeColor = System.Drawing.Color.Black;
-            this.priorityDashboardText.Location = new System.Drawing.Point(1, 4);
+            this.priorityDashboardText.Location = new System.Drawing.Point(1, 5);
+            this.priorityDashboardText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.priorityDashboardText.Name = "priorityDashboardText";
             this.priorityDashboardText.Size = new System.Drawing.Size(239, 31);
             this.priorityDashboardText.TabIndex = 0;
@@ -335,12 +361,13 @@
             // 
             // prioritiesControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.priorityPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "prioritiesControl";
-            this.Size = new System.Drawing.Size(645, 661);
+            this.Size = new System.Drawing.Size(843, 797);
             this.priorityPanel.ResumeLayout(false);
             this.priorityColorGuidePanel.ResumeLayout(false);
             this.priorityColorGuidePanel.PerformLayout();
