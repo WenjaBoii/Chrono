@@ -71,5 +71,10 @@ namespace Chrono
         private void panel6_Paint(object sender, PaintEventArgs e) { }
         private void panel7_Paint(object sender, PaintEventArgs e) { }
         private void label23_Click(object sender, EventArgs e) { }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

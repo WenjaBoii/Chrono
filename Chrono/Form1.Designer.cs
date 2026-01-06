@@ -39,6 +39,7 @@
             this.sideBarMotto = new System.Windows.Forms.Label();
             this.sideBarTitle = new System.Windows.Forms.Label();
             this.pagePanel = new System.Windows.Forms.Panel();
+            this.dashBoardControl1 = new Chrono.dashBoardControl();
             this.insightsControl1 = new Chrono.InsightsControl();
             this.tipsContro_1 = new Chrono.tipsContro_();
             this.focusTimerControl1 = new Chrono.focusTimerControl();
@@ -167,11 +168,24 @@
             // 
             // pagePanel
             // 
+            this.pagePanel.Controls.Add(this.dashBoardControl1);
+            this.pagePanel.Controls.Add(this.insightsControl1);
+            this.pagePanel.Controls.Add(this.tipsContro_1);
+            this.pagePanel.Controls.Add(this.focusTimerControl1);
+            this.pagePanel.Controls.Add(this.prioritiesControl1);
+            this.pagePanel.Controls.Add(this.tasksControl1);
             this.pagePanel.Location = new System.Drawing.Point(276, 0);
             this.pagePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pagePanel.Name = "pagePanel";
             this.pagePanel.Size = new System.Drawing.Size(827, 821);
             this.pagePanel.TabIndex = 10;
+            // 
+            // dashBoardControl1
+            // 
+            this.dashBoardControl1.Location = new System.Drawing.Point(0, 0);
+            this.dashBoardControl1.Name = "dashBoardControl1";
+            this.dashBoardControl1.Size = new System.Drawing.Size(617, 664);
+            this.dashBoardControl1.TabIndex = 4;
             // 
             // insightsControl1
             // 
@@ -243,12 +257,11 @@
         private System.Windows.Forms.PictureBox chronoLogo;
         public System.Windows.Forms.Button taskNavButton;
         private System.Windows.Forms.Panel pagePanel;
+        private dashBoardControl dashBoardControl1;
         private tipsContro_ tipsContro_1;
         private InsightsControl insightsControl1;
         private tasksControl tasksControl1;
         private prioritiesControl prioritiesControl1;
         private focusTimerControl focusTimerControl1;
     }
-}
-
 }
