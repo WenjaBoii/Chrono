@@ -28,7 +28,7 @@ namespace Chrono
                 return; // ❌ stop app
             }
 
-            Application.Run(new Form1());
+            Application.Run(new accountForm());
         }
         }
     }
