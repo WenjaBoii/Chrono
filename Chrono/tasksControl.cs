@@ -18,7 +18,6 @@ namespace Chrono
         {
             InitializeComponent();
             checkIfNull();
-            
         }
 
         string setPriority;
@@ -27,7 +26,7 @@ namespace Chrono
         string dateTime;
 
         LinkedList<taskItemGraphics> tasksList = new LinkedList<taskItemGraphics>();
-       public LinkedList<taskItemGraphics> allTask => tasksList;
+        public LinkedList<taskItemGraphics> allTask => tasksList;
         taskItemGraphics newTask;
 
         private taskItemGraphics currentlyEditingTask;
@@ -45,10 +44,10 @@ namespace Chrono
             }
         }
 
-        public taskItemGraphics NewTask 
+        public taskItemGraphics NewTask
         {
             get { return newTask; }
-            set {newTask = value; }
+            set { newTask = value; }
         }
 
         public void checkIfNull()
@@ -64,17 +63,13 @@ namespace Chrono
             }
         }
 
-        
-
         public void createTask()
         {
-
-           newTask = new taskItemGraphics(titleTextBox.Text, statusComboBox.Text,
+            newTask = new taskItemGraphics(titleTextBox.Text, statusComboBox.Text,
                                             dateTimeDropdownBox.Value, setPriority);
 
             newTask.ClickRequest += onTaskItemRequestEdit;
-            newTask.ClickCancel += onTaskItemRequestCancel; 
-
+            newTask.ClickCancel += onTaskItemRequestCancel;
 
             tasksList.AddFirst(newTask);
 
@@ -82,7 +77,6 @@ namespace Chrono
             {
                 taskListFlowLayout.Controls.Add(tasks);
             }
-
 
             createTaskPanelVisible(false);
             taskListFlowLayout.BringToFront();
@@ -92,28 +86,30 @@ namespace Chrono
             statusComboBox.SelectedItem = -1;
             dateTimeDropdownBox.Value = DateTime.Now;
 
-
+            RefreshDashboard(); // Update dashboard
         }
-      public void onTaskItemRequestCancel(object sender, EventArgs e)
+
+        public void onTaskItemRequestCancel(object sender, EventArgs e)
         {
             currentlyDeletingTask = sender as taskItemGraphics;
 
             if (sender is taskItemGraphics item)
             {
                 item.Parent.Controls.Remove(item);
+                tasksList.Remove(item);  // Remove from linked list
                 item.Dispose();
             }
 
             this.editTaskPanel.Visible = false;
             this.taskListFlowLayout.Visible = false;
             this.tasksPanel.Visible = true;
-            this.tasksPanel.BringToFront(); 
+            this.tasksPanel.BringToFront();
             this.taskListPanel.Visible = true;
-            this.taskListPanel.BringToFront();   
+            this.taskListPanel.BringToFront();
             editTitleTextBox.Clear();
 
-            currentlyDeletingTask.Dispose();    
-        }   
+            RefreshDashboard(); // Update dashboard
+        }
 
         public void onTaskItemRequestEdit(object sender, EventArgs e)
         {
@@ -126,7 +122,7 @@ namespace Chrono
             this.editTaskPanel.BringToFront();
             taskListFlowLayout.Visible = false;
 
-            if(sender is taskItemGraphics clickeditem)
+            if (sender is taskItemGraphics clickeditem)
             {
                 currentlyEditingTask = clickeditem;
                 DateTime dateValue = currentlyEditingTask.deadline;
@@ -143,9 +139,7 @@ namespace Chrono
                 {
                     this.editPanelDateTimePicker.Value = DateTime.Today;
                 }
-
             }
-
         }
 
         public void findTask()
@@ -159,14 +153,11 @@ namespace Chrono
             findItemClass.setVisibility<taskItemGraphics>(tasksList,
                 t => t.TaskTitle.Equals(searchBar.Text), true);
 
-
             foreach (var tasks in tasksList)
             {
-
                 taskListFlowLayout.Controls.Add(tasks);
                 Console.WriteLine(tasks.TaskTitle);
             }
-
         }
 
         public void createTaskPanelVisible(bool status)
@@ -181,7 +172,6 @@ namespace Chrono
         {
             createTaskPanelVisible(true);
             checkIfNull();
-
         }
 
         private void createTaskButton_Click(object sender, EventArgs e)
@@ -189,10 +179,8 @@ namespace Chrono
             createTaskPanelVisible(true);
         }
 
-
         public void buttonCreateTask_Click_1(object sender, EventArgs e)
         {
-
             createTask();
         }
 
@@ -236,7 +224,7 @@ namespace Chrono
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            // Empty or placeholder
         }
 
         private void cancelSearchButton_Click(object sender, EventArgs e)
@@ -252,16 +240,18 @@ namespace Chrono
 
         private void zz_Click(object sender, EventArgs e)
         {
-              currentlyEditingTask.TaskTitle = editTitleTextBox.Text;
-        currentlyEditingTask.TaskStatus = editStatusComboBox.Text;
-            currentlyEditingTask.deadline= editPanelDateTimePicker.Value;
-        currentlyEditingTask.TaskPriority = editPriority;
+            currentlyEditingTask.TaskTitle = editTitleTextBox.Text;
+            currentlyEditingTask.TaskStatus = editStatusComboBox.Text;
+            currentlyEditingTask.deadline = editPanelDateTimePicker.Value;
+            currentlyEditingTask.TaskPriority = editPriority;
 
             editTaskPanel.Visible = false;
             taskListFlowLayout.Visible = true;
             taskListFlowLayout.BringToFront();
 
             editTitleTextBox.Clear();
+
+            RefreshDashboard(); // Update dashboard
         }
 
         private void lowPriorityButtonEdit_Click(object sender, EventArgs e)
@@ -279,6 +269,50 @@ namespace Chrono
             editPriority = "High";
         }
 
-        
+        // Dashboard Integration Methods
+        public int GetTaskCount()
+        {
+            return tasksList.Count;
+        }
+
+        public int GetCompletedCount()
+        {
+            return tasksList.Count(t => t.TaskStatus.Equals("Completed", StringComparison.OrdinalIgnoreCase));
+        }
+
+        public int GetPendingCount()
+        {
+            return tasksList.Count(t => t.TaskStatus.Equals("In Progress", StringComparison.OrdinalIgnoreCase) ||
+                                         t.TaskStatus.Equals("Pending", StringComparison.OrdinalIgnoreCase) ||
+                                         t.TaskStatus.Equals("To Do", StringComparison.OrdinalIgnoreCase));
+        }
+
+        public int GetMissedCount()
+        {
+            return tasksList.Count(t => t.deadline < DateTime.Now &&
+                                        !t.TaskStatus.Equals("Completed", StringComparison.OrdinalIgnoreCase));
+        }
+
+        public double GetCompletionRate()
+        {
+            int total = GetTaskCount();
+            if (total == 0) return 0;
+
+            int completed = GetCompletedCount();
+            return (completed / (double)total) * 100;
+        }
+
+        private void RefreshDashboard()
+        {
+            var mainForm = this.FindForm();
+            if (mainForm != null)
+            {
+                var dashboardCtrl = mainForm.Controls.Find("dashBoardControl1", true).FirstOrDefault() as dashBoardControl;
+                if (dashboardCtrl != null)
+                {
+                    dashboardCtrl.RefreshDashboard();
+                }
+            }
+        }
     }
 }

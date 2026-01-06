@@ -99,7 +99,6 @@
             this.taskListPanel.Name = "taskListPanel";
             this.taskListPanel.Size = new System.Drawing.Size(784, 342);
             this.taskListPanel.TabIndex = 2;
-            this.taskListPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.taskListPanel_Paint);
             // 
             // createTaskButton
             // 
