@@ -36,7 +36,9 @@ namespace Chrono
 
         public void RefreshPriorityTask()
         {
+
            
+
             if (_actualSource == null) return;
 
             urgentTaskList.SuspendLayout();
