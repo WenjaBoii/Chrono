@@ -32,18 +32,18 @@ namespace Chrono
 
         private void SetupButtonEvents()
         {
-            // Wire up the Start button
+            // Start button
             startButton.Click += StartButton_Click;
 
-            // Wire up the Reset button
+            // Reset button
             resetButton.Click += ResetButton_Click;
 
-            // Wire up Work time buttons
+            // Work time buttons
             fifteenMinuteButton.Click += (s, e) => SetWorkDuration(15);
             twentyFiveMinuteButton.Click += (s, e) => SetWorkDuration(25);
             fortyFiveMinuteButton.Click += (s, e) => SetWorkDuration(45);
 
-            // Wire up Break time buttons
+            // Break time buttons
             threeMinutesButton.Click += (s, e) => SetBreakDuration(3);
             fiveMinutesButton.Click += (s, e) => SetBreakDuration(5);
             tenMinutesButton.Click += (s, e) => SetBreakDuration(10);
@@ -55,7 +55,7 @@ namespace Chrono
             timer.Interval = 1000; // 1 second
             timer.Tick += Timer_Tick;
 
-            // Initialize with work time
+            // Initialize work time
             totalSeconds = workDuration * 60;
             remainingSeconds = totalSeconds;
             UpdateDisplay();
@@ -214,7 +214,7 @@ namespace Chrono
             fortyFiveMinuteButton.FlatAppearance.BorderColor = Color.Gray;
             fortyFiveMinuteButton.FlatAppearance.BorderSize = 1;
 
-            // Highlight the selected button
+            // Highlight selected button
             if (selectedMinutes == 15)
             {
                 fifteenMinuteButton.FlatAppearance.BorderColor = Color.FromArgb(100, 149, 237);
@@ -285,6 +285,11 @@ namespace Chrono
                 System.Threading.Thread.Sleep(200);
                 SystemSounds.Exclamation.Play();
             }
+        }
+
+        private void workTimeText_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

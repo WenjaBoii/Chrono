@@ -17,69 +17,59 @@ namespace Chrono
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void dashBoardControl_Load(object sender, EventArgs e)
         {
-
+            RefreshDashboard();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void RefreshDashboard()
         {
+            var mainForm = this.FindForm();
+            if (mainForm != null)
+            {
+                var tasksCtrl = mainForm.Controls.Find("tasksControl1", true).FirstOrDefault() as tasksControl;
+                if (tasksCtrl != null)
+                {
+                    int total = tasksCtrl.GetTaskCount();
+                    int completed = tasksCtrl.GetCompletedCount();
+                    int pending = tasksCtrl.GetPendingCount();
+                    int missed = tasksCtrl.GetMissedCount();
+                    double rate = tasksCtrl.GetCompletionRate();
 
+                    SetLabel("label6", total.ToString());
+                    SetLabel("label7", completed.ToString());
+                    SetLabel("label9", pending.ToString());
+                    SetLabel("label11", missed.ToString());
+                    SetLabel("label23", $"{rate:F0}%");
+                }
+            }
+        }
+
+        private void SetLabel(string name, string value)
+        {
+            var c = this.Controls.Find(name, true);
+            if (c.Length > 0 && c[0] is Label lbl) lbl.Text = value;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Use the Tasks tab to add tasks", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Use the Tasks tab to view all tasks", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void dashBoardControl_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void label2_Click(object sender, EventArgs e) { }
+        private void panel3_Paint(object sender, PaintEventArgs e) { }
+        private void label6_Click(object sender, EventArgs e) { }
+        private void label7_Click(object sender, EventArgs e) { }
+        private void label9_Click(object sender, EventArgs e) { }
+        private void label11_Click(object sender, EventArgs e) { }
+        private void panel6_Paint(object sender, PaintEventArgs e) { }
+        private void panel7_Paint(object sender, PaintEventArgs e) { }
+        private void label23_Click(object sender, EventArgs e) { }
     }
 }
