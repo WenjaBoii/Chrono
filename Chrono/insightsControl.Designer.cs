@@ -31,8 +31,14 @@
             this.insightPanel = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.currentStreak = new System.Windows.Forms.Label();
+            this.currentstreakLabel = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.avgcompletionTime = new System.Windows.Forms.Label();
+            this.avgcompletiontimeLabel = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.mostproductiveDay = new System.Windows.Forms.Label();
+            this.mostproductivedayLabel = new System.Windows.Forms.Label();
             this.buttonAllTime = new System.Windows.Forms.Button();
             this.buttonMonth = new System.Windows.Forms.Button();
             this.buttonWeek = new System.Windows.Forms.Button();
@@ -65,12 +71,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.mostproductivedayLabel = new System.Windows.Forms.Label();
-            this.avgcompletiontimeLabel = new System.Windows.Forms.Label();
-            this.currentstreakLabel = new System.Windows.Forms.Label();
-            this.mostproductiveDay = new System.Windows.Forms.Label();
-            this.avgcompletionTime = new System.Windows.Forms.Label();
-            this.currentStreak = new System.Windows.Forms.Label();
             this.insightPanel.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel22.SuspendLayout();
@@ -125,6 +125,25 @@
             this.panel22.Size = new System.Drawing.Size(776, 46);
             this.panel22.TabIndex = 36;
             // 
+            // currentStreak
+            // 
+            this.currentStreak.AutoSize = true;
+            this.currentStreak.Location = new System.Drawing.Point(256, 15);
+            this.currentStreak.Name = "currentStreak";
+            this.currentStreak.Size = new System.Drawing.Size(44, 16);
+            this.currentStreak.TabIndex = 1;
+            this.currentStreak.Text = "label1";
+            // 
+            // currentstreakLabel
+            // 
+            this.currentstreakLabel.AutoSize = true;
+            this.currentstreakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentstreakLabel.Location = new System.Drawing.Point(19, 15);
+            this.currentstreakLabel.Name = "currentstreakLabel";
+            this.currentstreakLabel.Size = new System.Drawing.Size(89, 13);
+            this.currentstreakLabel.TabIndex = 0;
+            this.currentstreakLabel.Text = "Current Streak";
+            // 
             // panel21
             // 
             this.panel21.BackColor = System.Drawing.Color.LightGreen;
@@ -136,6 +155,25 @@
             this.panel21.Size = new System.Drawing.Size(776, 46);
             this.panel21.TabIndex = 36;
             // 
+            // avgcompletionTime
+            // 
+            this.avgcompletionTime.AutoSize = true;
+            this.avgcompletionTime.Location = new System.Drawing.Point(256, 14);
+            this.avgcompletionTime.Name = "avgcompletionTime";
+            this.avgcompletionTime.Size = new System.Drawing.Size(44, 16);
+            this.avgcompletionTime.TabIndex = 1;
+            this.avgcompletionTime.Text = "label1";
+            // 
+            // avgcompletiontimeLabel
+            // 
+            this.avgcompletiontimeLabel.AutoSize = true;
+            this.avgcompletiontimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avgcompletiontimeLabel.Location = new System.Drawing.Point(19, 14);
+            this.avgcompletiontimeLabel.Name = "avgcompletiontimeLabel";
+            this.avgcompletiontimeLabel.Size = new System.Drawing.Size(151, 13);
+            this.avgcompletiontimeLabel.TabIndex = 0;
+            this.avgcompletiontimeLabel.Text = "Average Completion Time";
+            // 
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.LightCyan;
@@ -146,6 +184,27 @@
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(776, 46);
             this.panel20.TabIndex = 35;
+            // 
+            // mostproductiveDay
+            // 
+            this.mostproductiveDay.AutoSize = true;
+            this.mostproductiveDay.Location = new System.Drawing.Point(255, 13);
+            this.mostproductiveDay.Name = "mostproductiveDay";
+            this.mostproductiveDay.Size = new System.Drawing.Size(44, 16);
+            this.mostproductiveDay.TabIndex = 1;
+            this.mostproductiveDay.Text = "label1";
+            this.mostproductiveDay.Click += new System.EventHandler(this.mostproductiveDay_Click);
+            // 
+            // mostproductivedayLabel
+            // 
+            this.mostproductivedayLabel.AutoSize = true;
+            this.mostproductivedayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mostproductivedayLabel.Location = new System.Drawing.Point(18, 14);
+            this.mostproductivedayLabel.Name = "mostproductivedayLabel";
+            this.mostproductivedayLabel.Size = new System.Drawing.Size(125, 13);
+            this.mostproductivedayLabel.TabIndex = 0;
+            this.mostproductivedayLabel.Text = "Most Productive Day";
+            this.mostproductivedayLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // buttonAllTime
             // 
@@ -187,7 +246,7 @@
             this.label24.Location = new System.Drawing.Point(11, 12);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(202, 25);
+            this.label24.Size = new System.Drawing.Size(163, 20);
             this.label24.TabIndex = 31;
             this.label24.Text = "Productivity Highlights";
             // 
@@ -237,7 +296,7 @@
             this.label33.Location = new System.Drawing.Point(8, 116);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(112, 17);
+            this.label33.Size = new System.Drawing.Size(85, 13);
             this.label33.TabIndex = 7;
             this.label33.Text = " Overall success";
             // 
@@ -249,7 +308,7 @@
             this.completionrateNumber.Location = new System.Drawing.Point(8, 91);
             this.completionrateNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.completionrateNumber.Name = "completionrateNumber";
-            this.completionrateNumber.Size = new System.Drawing.Size(35, 20);
+            this.completionrateNumber.Size = new System.Drawing.Size(28, 16);
             this.completionrateNumber.TabIndex = 7;
             this.completionrateNumber.Text = "0%";
             // 
@@ -269,7 +328,7 @@
             this.label35.Location = new System.Drawing.Point(8, 21);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(98, 40);
+            this.label35.Size = new System.Drawing.Size(78, 32);
             this.label35.TabIndex = 7;
             this.label35.Text = "Completion \r\nRate";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,7 +353,7 @@
             this.label36.Location = new System.Drawing.Point(23, 116);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(97, 17);
+            this.label36.Size = new System.Drawing.Size(73, 13);
             this.label36.TabIndex = 6;
             this.label36.Text = "past deadline ";
             // 
@@ -306,7 +365,7 @@
             this.missedTaskNumber.Location = new System.Drawing.Point(23, 91);
             this.missedTaskNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.missedTaskNumber.Name = "missedTaskNumber";
-            this.missedTaskNumber.Size = new System.Drawing.Size(19, 20);
+            this.missedTaskNumber.Size = new System.Drawing.Size(15, 16);
             this.missedTaskNumber.TabIndex = 6;
             this.missedTaskNumber.Text = "0";
             // 
@@ -326,7 +385,7 @@
             this.label37.Location = new System.Drawing.Point(23, 21);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(63, 20);
+            this.label37.Size = new System.Drawing.Size(51, 16);
             this.label37.TabIndex = 6;
             this.label37.Text = "Missed";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -354,7 +413,7 @@
             this.completedPercent.Location = new System.Drawing.Point(9, 116);
             this.completedPercent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.completedPercent.Name = "completedPercent";
-            this.completedPercent.Size = new System.Drawing.Size(28, 17);
+            this.completedPercent.Size = new System.Drawing.Size(21, 13);
             this.completedPercent.TabIndex = 5;
             this.completedPercent.Text = "0%";
             // 
@@ -365,7 +424,7 @@
             this.label38.Location = new System.Drawing.Point(36, 116);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(75, 17);
+            this.label38.Size = new System.Drawing.Size(57, 13);
             this.label38.TabIndex = 4;
             this.label38.Text = "of all tasks";
             // 
@@ -377,7 +436,7 @@
             this.completedNumber.Location = new System.Drawing.Point(8, 91);
             this.completedNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.completedNumber.Name = "completedNumber";
-            this.completedNumber.Size = new System.Drawing.Size(19, 20);
+            this.completedNumber.Size = new System.Drawing.Size(15, 16);
             this.completedNumber.TabIndex = 4;
             this.completedNumber.Text = "0";
             // 
@@ -397,7 +456,7 @@
             this.label39.Location = new System.Drawing.Point(11, 21);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(94, 20);
+            this.label39.Size = new System.Drawing.Size(76, 16);
             this.label39.TabIndex = 4;
             this.label39.Text = "Completed ";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -432,7 +491,7 @@
             this.label40.Location = new System.Drawing.Point(19, 116);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(53, 17);
+            this.label40.Size = new System.Drawing.Size(40, 13);
             this.label40.TabIndex = 3;
             this.label40.Text = "All time";
             // 
@@ -443,7 +502,7 @@
             this.totalTaskNumber.Location = new System.Drawing.Point(19, 91);
             this.totalTaskNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalTaskNumber.Name = "totalTaskNumber";
-            this.totalTaskNumber.Size = new System.Drawing.Size(19, 20);
+            this.totalTaskNumber.Size = new System.Drawing.Size(15, 16);
             this.totalTaskNumber.TabIndex = 2;
             this.totalTaskNumber.Text = "0";
             this.totalTaskNumber.Click += new System.EventHandler(this.totalTaskNumber_Click);
@@ -464,7 +523,7 @@
             this.label41.Location = new System.Drawing.Point(15, 21);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(82, 20);
+            this.label41.Size = new System.Drawing.Size(66, 16);
             this.label41.TabIndex = 0;
             this.label41.Text = "Total task";
             // 
@@ -490,6 +549,7 @@
             this.button5.TabIndex = 2;
             this.button5.Text = "Export data";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label42
             // 
@@ -508,68 +568,9 @@
             this.label43.Location = new System.Drawing.Point(9, 6);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(109, 31);
+            this.label43.Size = new System.Drawing.Size(86, 25);
             this.label43.TabIndex = 0;
             this.label43.Text = "Insights";
-            // 
-            // mostproductivedayLabel
-            // 
-            this.mostproductivedayLabel.AutoSize = true;
-            this.mostproductivedayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mostproductivedayLabel.Location = new System.Drawing.Point(18, 14);
-            this.mostproductivedayLabel.Name = "mostproductivedayLabel";
-            this.mostproductivedayLabel.Size = new System.Drawing.Size(150, 16);
-            this.mostproductivedayLabel.TabIndex = 0;
-            this.mostproductivedayLabel.Text = "Most Productive Day";
-            this.mostproductivedayLabel.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // avgcompletiontimeLabel
-            // 
-            this.avgcompletiontimeLabel.AutoSize = true;
-            this.avgcompletiontimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.avgcompletiontimeLabel.Location = new System.Drawing.Point(19, 14);
-            this.avgcompletiontimeLabel.Name = "avgcompletiontimeLabel";
-            this.avgcompletiontimeLabel.Size = new System.Drawing.Size(187, 16);
-            this.avgcompletiontimeLabel.TabIndex = 0;
-            this.avgcompletiontimeLabel.Text = "Average Completion Time";
-            // 
-            // currentstreakLabel
-            // 
-            this.currentstreakLabel.AutoSize = true;
-            this.currentstreakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentstreakLabel.Location = new System.Drawing.Point(19, 15);
-            this.currentstreakLabel.Name = "currentstreakLabel";
-            this.currentstreakLabel.Size = new System.Drawing.Size(105, 16);
-            this.currentstreakLabel.TabIndex = 0;
-            this.currentstreakLabel.Text = "Current Streak";
-            // 
-            // mostproductiveDay
-            // 
-            this.mostproductiveDay.AutoSize = true;
-            this.mostproductiveDay.Location = new System.Drawing.Point(255, 13);
-            this.mostproductiveDay.Name = "mostproductiveDay";
-            this.mostproductiveDay.Size = new System.Drawing.Size(44, 16);
-            this.mostproductiveDay.TabIndex = 1;
-            this.mostproductiveDay.Text = "label1";
-            this.mostproductiveDay.Click += new System.EventHandler(this.mostproductiveDay_Click);
-            // 
-            // avgcompletionTime
-            // 
-            this.avgcompletionTime.AutoSize = true;
-            this.avgcompletionTime.Location = new System.Drawing.Point(256, 14);
-            this.avgcompletionTime.Name = "avgcompletionTime";
-            this.avgcompletionTime.Size = new System.Drawing.Size(44, 16);
-            this.avgcompletionTime.TabIndex = 1;
-            this.avgcompletionTime.Text = "label1";
-            // 
-            // currentStreak
-            // 
-            this.currentStreak.AutoSize = true;
-            this.currentStreak.Location = new System.Drawing.Point(256, 15);
-            this.currentStreak.Name = "currentStreak";
-            this.currentStreak.Size = new System.Drawing.Size(44, 16);
-            this.currentStreak.TabIndex = 1;
-            this.currentStreak.Text = "label1";
             // 
             // InsightsControl
             // 
