@@ -42,11 +42,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.proTipPanel = new System.Windows.Forms.Panel();
             this.pagePanel = new System.Windows.Forms.Panel();
-            this.insightsControl1 = new Chrono.insightsControl();
-            this.tipsContro_1 = new Chrono.tipsContro_();
-            this.focusTimerControl1 = new Chrono.focusTimerControl();
-            this.prioritiesControl1 = new Chrono.prioritiesControl();
             this.tasksControl1 = new Chrono.tasksControl();
+            this.prioritiesControl1 = new Chrono.prioritiesControl();
+            this.focusTimerControl1 = new Chrono.focusTimerControl();
+            this.tipsContro_1 = new Chrono.tipsContro_();
+            this.insightsControl1 = new Chrono.insightsControl();
             this.sideBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chronoLogo)).BeginInit();
             this.proTipContainer.SuspendLayout();
@@ -201,41 +201,48 @@
             this.pagePanel.Size = new System.Drawing.Size(620, 667);
             this.pagePanel.TabIndex = 10;
             // 
-            // insightsControl1
-            // 
-            this.insightsControl1.Location = new System.Drawing.Point(3, 3);
-            this.insightsControl1.Name = "insightsControl1";
-            this.insightsControl1.Size = new System.Drawing.Size(614, 661);
-            this.insightsControl1.TabIndex = 0;
-            // 
-            // tipsContro_1
-            // 
-            this.tipsContro_1.Location = new System.Drawing.Point(0, 0);
-            this.tipsContro_1.Name = "tipsContro_1";
-            this.tipsContro_1.Size = new System.Drawing.Size(617, 664);
-            this.tipsContro_1.TabIndex = 1;
-            // 
-            // focusTimerControl1
-            // 
-            this.focusTimerControl1.Location = new System.Drawing.Point(3, 0);
-            this.focusTimerControl1.Name = "focusTimerControl1";
-            this.focusTimerControl1.Size = new System.Drawing.Size(627, 664);
-            this.focusTimerControl1.TabIndex = 0;
-            // 
-            // prioritiesControl1
-            // 
-            this.prioritiesControl1.Location = new System.Drawing.Point(3, 0);
-            this.prioritiesControl1.Name = "prioritiesControl1";
-            this.prioritiesControl1.Size = new System.Drawing.Size(617, 651);
-            this.prioritiesControl1.TabIndex = 2;
-            // 
             // tasksControl1
             // 
+            this.tasksControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tasksControl1.editTaskPanelVisibleStatus = false;
             this.tasksControl1.Location = new System.Drawing.Point(0, 0);
             this.tasksControl1.Name = "tasksControl1";
-            this.tasksControl1.Size = new System.Drawing.Size(619, 664);
+            this.tasksControl1.NewTask = null;
+            this.tasksControl1.Size = new System.Drawing.Size(620, 667);
             this.tasksControl1.TabIndex = 3;
+            // 
+            // prioritiesControl1
+            // 
+            this.prioritiesControl1.AutoScroll = true;
+            this.prioritiesControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prioritiesControl1.Location = new System.Drawing.Point(0, 0);
+            this.prioritiesControl1.Name = "prioritiesControl1";
+            this.prioritiesControl1.Size = new System.Drawing.Size(620, 667);
+            this.prioritiesControl1.TabIndex = 2;
+            // 
+            // focusTimerControl1
+            // 
+            this.focusTimerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.focusTimerControl1.Location = new System.Drawing.Point(0, 0);
+            this.focusTimerControl1.Name = "focusTimerControl1";
+            this.focusTimerControl1.Size = new System.Drawing.Size(620, 667);
+            this.focusTimerControl1.TabIndex = 0;
+            // 
+            // tipsContro_1
+            // 
+            this.tipsContro_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tipsContro_1.Location = new System.Drawing.Point(0, 0);
+            this.tipsContro_1.Name = "tipsContro_1";
+            this.tipsContro_1.Size = new System.Drawing.Size(620, 667);
+            this.tipsContro_1.TabIndex = 1;
+            // 
+            // insightsControl1
+            // 
+            this.insightsControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.insightsControl1.Location = new System.Drawing.Point(0, 0);
+            this.insightsControl1.Name = "insightsControl1";
+            this.insightsControl1.Size = new System.Drawing.Size(620, 667);
+            this.insightsControl1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -246,6 +253,7 @@
             this.Controls.Add(this.pagePanel);
             this.Controls.Add(this.proTipPanel);
             this.Controls.Add(this.sideBarPanel);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

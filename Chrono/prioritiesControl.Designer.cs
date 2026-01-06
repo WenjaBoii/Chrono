@@ -74,7 +74,7 @@
             this.priorityPanel.Controls.Add(this.priorityDashboardHeaderPanel);
             this.priorityPanel.Location = new System.Drawing.Point(3, 3);
             this.priorityPanel.Name = "priorityPanel";
-            this.priorityPanel.Size = new System.Drawing.Size(656, 682);
+            this.priorityPanel.Size = new System.Drawing.Size(603, 682);
             this.priorityPanel.TabIndex = 22;
             // 
             // priorityColorGuidePanel
@@ -223,12 +223,12 @@
             this.urgentTaskPanel.Controls.Add(this.urgentTaskList);
             this.urgentTaskPanel.Location = new System.Drawing.Point(11, 79);
             this.urgentTaskPanel.Name = "urgentTaskPanel";
-            this.urgentTaskPanel.Size = new System.Drawing.Size(642, 221);
+            this.urgentTaskPanel.Size = new System.Drawing.Size(586, 221);
             this.urgentTaskPanel.TabIndex = 1;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(311, 113);
+            this.pictureBox2.Location = new System.Drawing.Point(261, 113);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 36);
             this.pictureBox2.TabIndex = 3;
@@ -240,7 +240,7 @@
             this.urgentTaskBodyText.BackColor = System.Drawing.Color.White;
             this.urgentTaskBodyText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.urgentTaskBodyText.ForeColor = System.Drawing.Color.Black;
-            this.urgentTaskBodyText.Location = new System.Drawing.Point(247, 169);
+            this.urgentTaskBodyText.Location = new System.Drawing.Point(194, 169);
             this.urgentTaskBodyText.Name = "urgentTaskBodyText";
             this.urgentTaskBodyText.Size = new System.Drawing.Size(189, 16);
             this.urgentTaskBodyText.TabIndex = 5;
@@ -254,7 +254,7 @@
             this.urgentTaskHeader.Controls.Add(this.urgentTaskText);
             this.urgentTaskHeader.Location = new System.Drawing.Point(0, 0);
             this.urgentTaskHeader.Name = "urgentTaskHeader";
-            this.urgentTaskHeader.Size = new System.Drawing.Size(639, 62);
+            this.urgentTaskHeader.Size = new System.Drawing.Size(642, 62);
             this.urgentTaskHeader.TabIndex = 2;
             // 
             // urgentTaskInfoText
@@ -291,13 +291,11 @@
             // 
             // urgentTaskList
             // 
-            this.urgentTaskList.AutoScroll = true;
             this.urgentTaskList.AutoSize = true;
             this.urgentTaskList.BackColor = System.Drawing.Color.White;
-            this.urgentTaskList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.urgentTaskList.Location = new System.Drawing.Point(0, 0);
+            this.urgentTaskList.Location = new System.Drawing.Point(0, 62);
             this.urgentTaskList.Name = "urgentTaskList";
-            this.urgentTaskList.Size = new System.Drawing.Size(642, 221);
+            this.urgentTaskList.Size = new System.Drawing.Size(586, 159);
             this.urgentTaskList.TabIndex = 5;
             // 
             // priorityDashboardHeaderPanel
@@ -307,7 +305,7 @@
             this.priorityDashboardHeaderPanel.Controls.Add(this.priorityDashboardText);
             this.priorityDashboardHeaderPanel.Location = new System.Drawing.Point(8, 12);
             this.priorityDashboardHeaderPanel.Name = "priorityDashboardHeaderPanel";
-            this.priorityDashboardHeaderPanel.Size = new System.Drawing.Size(645, 61);
+            this.priorityDashboardHeaderPanel.Size = new System.Drawing.Size(589, 61);
             this.priorityDashboardHeaderPanel.TabIndex = 0;
             // 
             // priorityMessageText
@@ -340,7 +338,7 @@
             this.AutoScroll = true;
             this.Controls.Add(this.priorityPanel);
             this.Name = "prioritiesControl";
-            this.Size = new System.Drawing.Size(645, 661);
+            this.Size = new System.Drawing.Size(607, 661);
             this.priorityPanel.ResumeLayout(false);
             this.priorityColorGuidePanel.ResumeLayout(false);
             this.priorityColorGuidePanel.PerformLayout();

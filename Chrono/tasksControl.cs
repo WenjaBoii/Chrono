@@ -75,14 +75,12 @@ namespace Chrono
             newTask.ClickRequest += onTaskItemRequestEdit;
             newTask.ClickCancel += onTaskItemRequestCancel; 
 
-
             tasksList.AddFirst(newTask);
 
             foreach (var tasks in tasksList)
             {
                 taskListFlowLayout.Controls.Add(tasks);
             }
-
 
             createTaskPanelVisible(false);
             taskListFlowLayout.BringToFront();
@@ -91,7 +89,6 @@ namespace Chrono
             setPriority = null;
             statusComboBox.SelectedItem = -1;
             dateTimeDropdownBox.Value = DateTime.Now;
-
 
         }
       public void onTaskItemRequestCancel(object sender, EventArgs e)

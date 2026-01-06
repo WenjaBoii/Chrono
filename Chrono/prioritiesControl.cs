@@ -37,6 +37,7 @@ namespace Chrono
         public void RefreshPriorityTask()
         {
            
+
             if (_actualSource == null) return;
 
             urgentTaskList.SuspendLayout();
@@ -49,17 +50,8 @@ namespace Chrono
             {
                 if (task.deadline <= DateTime.Now.AddDays(1))
                 {
-                    taskItemGraphics copiedTask = new taskItemGraphics(
+                    urgentTaskList.Controls.Add(task);
 
-                        task.TaskTitle,
-                        task.TaskStatus,
-                        task.deadline,
-                        task.TaskPriority
-                     
-                        );
-
-
-                    urgentTaskList.Controls.Add(copiedTask);
                 }
             }
             urgentTaskList.BringToFront();
