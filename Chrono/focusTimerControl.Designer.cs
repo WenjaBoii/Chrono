@@ -78,7 +78,7 @@
             this.focusTimerPanel.Controls.Add(this.timerPanel);
             this.focusTimerPanel.Controls.Add(this.focusTimerHeaderPanel);
             this.focusTimerPanel.Location = new System.Drawing.Point(4, 4);
-            this.focusTimerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.focusTimerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.focusTimerPanel.Name = "focusTimerPanel";
             this.focusTimerPanel.Size = new System.Drawing.Size(813, 799);
             this.focusTimerPanel.TabIndex = 24;
@@ -94,7 +94,7 @@
             this.panel2.Controls.Add(this.breakTimeDuration);
             this.panel2.Controls.Add(this.breakTimeTex);
             this.panel2.Location = new System.Drawing.Point(407, 539);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(403, 250);
             this.panel2.TabIndex = 3;
@@ -102,7 +102,7 @@
             // tenMinutesButton
             // 
             this.tenMinutesButton.Location = new System.Drawing.Point(271, 187);
-            this.tenMinutesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tenMinutesButton.Margin = new System.Windows.Forms.Padding(4);
             this.tenMinutesButton.Name = "tenMinutesButton";
             this.tenMinutesButton.Size = new System.Drawing.Size(121, 39);
             this.tenMinutesButton.TabIndex = 11;
@@ -112,7 +112,7 @@
             // fiveMinutesButton
             // 
             this.fiveMinutesButton.Location = new System.Drawing.Point(141, 187);
-            this.fiveMinutesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fiveMinutesButton.Margin = new System.Windows.Forms.Padding(4);
             this.fiveMinutesButton.Name = "fiveMinutesButton";
             this.fiveMinutesButton.Size = new System.Drawing.Size(121, 39);
             this.fiveMinutesButton.TabIndex = 11;
@@ -122,7 +122,7 @@
             // threeMinutesButton
             // 
             this.threeMinutesButton.Location = new System.Drawing.Point(12, 187);
-            this.threeMinutesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.threeMinutesButton.Margin = new System.Windows.Forms.Padding(4);
             this.threeMinutesButton.Name = "threeMinutesButton";
             this.threeMinutesButton.Size = new System.Drawing.Size(121, 39);
             this.threeMinutesButton.TabIndex = 11;
@@ -134,7 +134,7 @@
             this.minuteSliderBreakTime.Controls.Add(this.label17);
             this.minuteSliderBreakTime.Controls.Add(this.label18);
             this.minuteSliderBreakTime.Location = new System.Drawing.Point(4, 155);
-            this.minuteSliderBreakTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.minuteSliderBreakTime.Margin = new System.Windows.Forms.Padding(4);
             this.minuteSliderBreakTime.Name = "minuteSliderBreakTime";
             this.minuteSliderBreakTime.Size = new System.Drawing.Size(395, 25);
             this.minuteSliderBreakTime.TabIndex = 11;
@@ -147,7 +147,7 @@
             this.label17.Location = new System.Drawing.Point(4, 2);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 18);
+            this.label17.Size = new System.Drawing.Size(44, 15);
             this.label17.TabIndex = 3;
             this.label17.Text = "5 mins";
             // 
@@ -159,7 +159,7 @@
             this.label18.Location = new System.Drawing.Point(323, 2);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(60, 18);
+            this.label18.Size = new System.Drawing.Size(51, 15);
             this.label18.TabIndex = 4;
             this.label18.Text = "60 mins";
             // 
@@ -171,7 +171,7 @@
             this.breakTimeDurationMinutes.Location = new System.Drawing.Point(100, 81);
             this.breakTimeDurationMinutes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.breakTimeDurationMinutes.Name = "breakTimeDurationMinutes";
-            this.breakTimeDurationMinutes.Size = new System.Drawing.Size(52, 18);
+            this.breakTimeDurationMinutes.Size = new System.Drawing.Size(44, 15);
             this.breakTimeDurationMinutes.TabIndex = 11;
             this.breakTimeDurationMinutes.Text = "5 mins";
             // 
@@ -182,7 +182,7 @@
             this.breakTimeDuration.Location = new System.Drawing.Point(16, 81);
             this.breakTimeDuration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.breakTimeDuration.Name = "breakTimeDuration";
-            this.breakTimeDuration.Size = new System.Drawing.Size(68, 18);
+            this.breakTimeDuration.Size = new System.Drawing.Size(57, 15);
             this.breakTimeDuration.TabIndex = 11;
             this.breakTimeDuration.Text = "Duration:";
             // 
@@ -193,7 +193,7 @@
             this.breakTimeTex.Location = new System.Drawing.Point(15, 17);
             this.breakTimeTex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.breakTimeTex.Name = "breakTimeTex";
-            this.breakTimeTex.Size = new System.Drawing.Size(122, 25);
+            this.breakTimeTex.Size = new System.Drawing.Size(99, 20);
             this.breakTimeTex.TabIndex = 11;
             this.breakTimeTex.Text = "Break Time";
             // 
@@ -208,7 +208,7 @@
             this.timeWorkPanel.Controls.Add(this.durationText);
             this.timeWorkPanel.Controls.Add(this.timeWorkText);
             this.timeWorkPanel.Location = new System.Drawing.Point(4, 539);
-            this.timeWorkPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.timeWorkPanel.Margin = new System.Windows.Forms.Padding(4);
             this.timeWorkPanel.Name = "timeWorkPanel";
             this.timeWorkPanel.Size = new System.Drawing.Size(395, 250);
             this.timeWorkPanel.TabIndex = 2;
@@ -218,7 +218,7 @@
             this.minuteSliderText.Controls.Add(this.sliderMinutesText);
             this.minuteSliderText.Controls.Add(this.label19);
             this.minuteSliderText.Location = new System.Drawing.Point(8, 155);
-            this.minuteSliderText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.minuteSliderText.Margin = new System.Windows.Forms.Padding(4);
             this.minuteSliderText.Name = "minuteSliderText";
             this.minuteSliderText.Size = new System.Drawing.Size(380, 25);
             this.minuteSliderText.TabIndex = 10;
@@ -231,7 +231,7 @@
             this.sliderMinutesText.Location = new System.Drawing.Point(4, 2);
             this.sliderMinutesText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sliderMinutesText.Name = "sliderMinutesText";
-            this.sliderMinutesText.Size = new System.Drawing.Size(52, 18);
+            this.sliderMinutesText.Size = new System.Drawing.Size(44, 15);
             this.sliderMinutesText.TabIndex = 3;
             this.sliderMinutesText.Text = "5 mins";
             // 
@@ -243,14 +243,14 @@
             this.label19.Location = new System.Drawing.Point(309, 2);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 18);
+            this.label19.Size = new System.Drawing.Size(51, 15);
             this.label19.TabIndex = 4;
             this.label19.Text = "60 mins";
             // 
             // fortyFiveMinuteButton
             // 
             this.fortyFiveMinuteButton.Location = new System.Drawing.Point(267, 187);
-            this.fortyFiveMinuteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fortyFiveMinuteButton.Margin = new System.Windows.Forms.Padding(4);
             this.fortyFiveMinuteButton.Name = "fortyFiveMinuteButton";
             this.fortyFiveMinuteButton.Size = new System.Drawing.Size(121, 39);
             this.fortyFiveMinuteButton.TabIndex = 9;
@@ -260,7 +260,7 @@
             // twentyFiveMinuteButton
             // 
             this.twentyFiveMinuteButton.Location = new System.Drawing.Point(137, 187);
-            this.twentyFiveMinuteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.twentyFiveMinuteButton.Margin = new System.Windows.Forms.Padding(4);
             this.twentyFiveMinuteButton.Name = "twentyFiveMinuteButton";
             this.twentyFiveMinuteButton.Size = new System.Drawing.Size(121, 39);
             this.twentyFiveMinuteButton.TabIndex = 8;
@@ -270,7 +270,7 @@
             // fifteenMinuteButton
             // 
             this.fifteenMinuteButton.Location = new System.Drawing.Point(8, 187);
-            this.fifteenMinuteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fifteenMinuteButton.Margin = new System.Windows.Forms.Padding(4);
             this.fifteenMinuteButton.Name = "fifteenMinuteButton";
             this.fifteenMinuteButton.Size = new System.Drawing.Size(121, 39);
             this.fifteenMinuteButton.TabIndex = 7;
@@ -285,7 +285,7 @@
             this.durationMinutes.Location = new System.Drawing.Point(89, 81);
             this.durationMinutes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.durationMinutes.Name = "durationMinutes";
-            this.durationMinutes.Size = new System.Drawing.Size(60, 18);
+            this.durationMinutes.Size = new System.Drawing.Size(51, 15);
             this.durationMinutes.TabIndex = 2;
             this.durationMinutes.Text = "25 mins";
             // 
@@ -296,7 +296,7 @@
             this.durationText.Location = new System.Drawing.Point(12, 81);
             this.durationText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.durationText.Name = "durationText";
-            this.durationText.Size = new System.Drawing.Size(68, 18);
+            this.durationText.Size = new System.Drawing.Size(57, 15);
             this.durationText.TabIndex = 1;
             this.durationText.Text = "Duration:";
             // 
@@ -307,7 +307,7 @@
             this.timeWorkText.Location = new System.Drawing.Point(11, 17);
             this.timeWorkText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timeWorkText.Name = "timeWorkText";
-            this.timeWorkText.Size = new System.Drawing.Size(117, 25);
+            this.timeWorkText.Size = new System.Drawing.Size(93, 20);
             this.timeWorkText.TabIndex = 0;
             this.timeWorkText.Text = "Work Time";
             // 
@@ -322,7 +322,7 @@
             this.timerPanel.Controls.Add(this.timerText);
             this.timerPanel.Controls.Add(this.workTimeLabel);
             this.timerPanel.Location = new System.Drawing.Point(4, 79);
-            this.timerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.timerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.timerPanel.Name = "timerPanel";
             this.timerPanel.Size = new System.Drawing.Size(805, 454);
             this.timerPanel.TabIndex = 1;
@@ -334,14 +334,14 @@
             this.sessionCompleteText.Location = new System.Drawing.Point(311, 407);
             this.sessionCompleteText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sessionCompleteText.Name = "sessionCompleteText";
-            this.sessionCompleteText.Size = new System.Drawing.Size(173, 20);
+            this.sessionCompleteText.Size = new System.Drawing.Size(138, 16);
             this.sessionCompleteText.TabIndex = 6;
             this.sessionCompleteText.Text = "Session Completed: 0";
             // 
             // soundButton
             // 
             this.soundButton.Location = new System.Drawing.Point(509, 332);
-            this.soundButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.soundButton.Margin = new System.Windows.Forms.Padding(4);
             this.soundButton.Name = "soundButton";
             this.soundButton.Size = new System.Drawing.Size(64, 39);
             this.soundButton.TabIndex = 5;
@@ -350,7 +350,7 @@
             // resetButton
             // 
             this.resetButton.Location = new System.Drawing.Point(373, 332);
-            this.resetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.resetButton.Margin = new System.Windows.Forms.Padding(4);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(128, 39);
             this.resetButton.TabIndex = 4;
@@ -361,7 +361,7 @@
             // 
             this.startButton.BackColor = System.Drawing.Color.CornflowerBlue;
             this.startButton.Location = new System.Drawing.Point(237, 332);
-            this.startButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.startButton.Margin = new System.Windows.Forms.Padding(4);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(128, 39);
             this.startButton.TabIndex = 3;
@@ -375,7 +375,7 @@
             this.completionText.Location = new System.Drawing.Point(345, 223);
             this.completionText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.completionText.Name = "completionText";
-            this.completionText.Size = new System.Drawing.Size(106, 20);
+            this.completionText.Size = new System.Drawing.Size(85, 16);
             this.completionText.TabIndex = 2;
             this.completionText.Text = "0% complete";
             // 
@@ -386,7 +386,7 @@
             this.timerText.Location = new System.Drawing.Point(301, 143);
             this.timerText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timerText.Name = "timerText";
-            this.timerText.Size = new System.Drawing.Size(184, 69);
+            this.timerText.Size = new System.Drawing.Size(150, 55);
             this.timerText.TabIndex = 1;
             this.timerText.Text = "25:00";
             // 
@@ -395,7 +395,7 @@
             this.workTimeLabel.BackColor = System.Drawing.Color.CornflowerBlue;
             this.workTimeLabel.Controls.Add(this.workTimeText);
             this.workTimeLabel.Location = new System.Drawing.Point(339, 22);
-            this.workTimeLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.workTimeLabel.Margin = new System.Windows.Forms.Padding(4);
             this.workTimeLabel.Name = "workTimeLabel";
             this.workTimeLabel.Size = new System.Drawing.Size(120, 37);
             this.workTimeLabel.TabIndex = 0;
@@ -407,16 +407,17 @@
             this.workTimeText.Location = new System.Drawing.Point(12, 7);
             this.workTimeText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.workTimeText.Name = "workTimeText";
-            this.workTimeText.Size = new System.Drawing.Size(90, 20);
+            this.workTimeText.Size = new System.Drawing.Size(73, 16);
             this.workTimeText.TabIndex = 0;
             this.workTimeText.Text = "Work Time";
+            this.workTimeText.Click += new System.EventHandler(this.workTimeText_Click);
             // 
             // focusTimerHeaderPanel
             // 
             this.focusTimerHeaderPanel.Controls.Add(this.pomodoroText);
             this.focusTimerHeaderPanel.Controls.Add(this.focusTimerText);
             this.focusTimerHeaderPanel.Location = new System.Drawing.Point(4, 4);
-            this.focusTimerHeaderPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.focusTimerHeaderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.focusTimerHeaderPanel.Name = "focusTimerHeaderPanel";
             this.focusTimerHeaderPanel.Size = new System.Drawing.Size(805, 68);
             this.focusTimerHeaderPanel.TabIndex = 0;
@@ -428,7 +429,7 @@
             this.pomodoroText.Location = new System.Drawing.Point(7, 41);
             this.pomodoroText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pomodoroText.Name = "pomodoroText";
-            this.pomodoroText.Size = new System.Drawing.Size(251, 18);
+            this.pomodoroText.Size = new System.Drawing.Size(205, 15);
             this.pomodoroText.TabIndex = 1;
             this.pomodoroText.Text = "Pomodoro technique for productivity ";
             // 
@@ -439,7 +440,7 @@
             this.focusTimerText.Location = new System.Drawing.Point(4, 7);
             this.focusTimerText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.focusTimerText.Name = "focusTimerText";
-            this.focusTimerText.Size = new System.Drawing.Size(160, 29);
+            this.focusTimerText.Size = new System.Drawing.Size(128, 24);
             this.focusTimerText.TabIndex = 0;
             this.focusTimerText.Text = "Focus Timer";
             // 
@@ -448,7 +449,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.focusTimerPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "focusTimerControl";
             this.Size = new System.Drawing.Size(821, 809);
             this.focusTimerPanel.ResumeLayout(false);

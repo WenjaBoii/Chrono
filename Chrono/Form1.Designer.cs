@@ -39,8 +39,10 @@
             this.sideBarMotto = new System.Windows.Forms.Label();
             this.sideBarTitle = new System.Windows.Forms.Label();
             this.pagePanel = new System.Windows.Forms.Panel();
+            this.dashBoardControl1 = new Chrono.dashBoardControl();
             this.sideBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chronoLogo)).BeginInit();
+            this.pagePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideBarPanel
@@ -57,7 +59,7 @@
             this.sideBarPanel.Controls.Add(this.sideBarMotto);
             this.sideBarPanel.Controls.Add(this.sideBarTitle);
             this.sideBarPanel.Location = new System.Drawing.Point(-3, -5);
-            this.sideBarPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sideBarPanel.Margin = new System.Windows.Forms.Padding(4);
             this.sideBarPanel.Name = "sideBarPanel";
             this.sideBarPanel.Size = new System.Drawing.Size(282, 644);
             this.sideBarPanel.TabIndex = 0;
@@ -65,7 +67,7 @@
             // insightsNavButton
             // 
             this.insightsNavButton.Location = new System.Drawing.Point(15, 460);
-            this.insightsNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insightsNavButton.Margin = new System.Windows.Forms.Padding(4);
             this.insightsNavButton.Name = "insightsNavButton";
             this.insightsNavButton.Size = new System.Drawing.Size(251, 69);
             this.insightsNavButton.TabIndex = 7;
@@ -76,7 +78,7 @@
             // tipsNavButton
             // 
             this.tipsNavButton.Location = new System.Drawing.Point(15, 384);
-            this.tipsNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tipsNavButton.Margin = new System.Windows.Forms.Padding(4);
             this.tipsNavButton.Name = "tipsNavButton";
             this.tipsNavButton.Size = new System.Drawing.Size(251, 69);
             this.tipsNavButton.TabIndex = 6;
@@ -87,7 +89,7 @@
             // focusTimerNavButton
             // 
             this.focusTimerNavButton.Location = new System.Drawing.Point(15, 308);
-            this.focusTimerNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.focusTimerNavButton.Margin = new System.Windows.Forms.Padding(4);
             this.focusTimerNavButton.Name = "focusTimerNavButton";
             this.focusTimerNavButton.Size = new System.Drawing.Size(251, 69);
             this.focusTimerNavButton.TabIndex = 5;
@@ -98,7 +100,7 @@
             // priorityNavButton
             // 
             this.priorityNavButton.Location = new System.Drawing.Point(16, 231);
-            this.priorityNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.priorityNavButton.Margin = new System.Windows.Forms.Padding(4);
             this.priorityNavButton.Name = "priorityNavButton";
             this.priorityNavButton.Size = new System.Drawing.Size(251, 69);
             this.priorityNavButton.TabIndex = 4;
@@ -109,7 +111,7 @@
             // taskNavButton
             // 
             this.taskNavButton.Location = new System.Drawing.Point(12, 155);
-            this.taskNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.taskNavButton.Margin = new System.Windows.Forms.Padding(4);
             this.taskNavButton.Name = "taskNavButton";
             this.taskNavButton.Size = new System.Drawing.Size(251, 69);
             this.taskNavButton.TabIndex = 3;
@@ -120,7 +122,7 @@
             // dashBoardNavButton
             // 
             this.dashBoardNavButton.Location = new System.Drawing.Point(15, 79);
-            this.dashBoardNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dashBoardNavButton.Margin = new System.Windows.Forms.Padding(4);
             this.dashBoardNavButton.Name = "dashBoardNavButton";
             this.dashBoardNavButton.Size = new System.Drawing.Size(251, 69);
             this.dashBoardNavButton.TabIndex = 2;
@@ -131,7 +133,7 @@
             // chronoLogo
             // 
             this.chronoLogo.Location = new System.Drawing.Point(19, 20);
-            this.chronoLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chronoLogo.Margin = new System.Windows.Forms.Padding(4);
             this.chronoLogo.Name = "chronoLogo";
             this.chronoLogo.Size = new System.Drawing.Size(60, 46);
             this.chronoLogo.TabIndex = 1;
@@ -155,18 +157,28 @@
             this.sideBarTitle.Location = new System.Drawing.Point(77, 17);
             this.sideBarTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sideBarTitle.Name = "sideBarTitle";
-            this.sideBarTitle.Size = new System.Drawing.Size(100, 30);
+            this.sideBarTitle.Size = new System.Drawing.Size(79, 24);
             this.sideBarTitle.TabIndex = 0;
             this.sideBarTitle.Text = "Chrono ";
             // 
             // pagePanel
             // 
+            this.pagePanel.Controls.Add(this.dashBoardControl1);
             this.pagePanel.Location = new System.Drawing.Point(276, 0);
-            this.pagePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pagePanel.Margin = new System.Windows.Forms.Padding(4);
             this.pagePanel.Name = "pagePanel";
             this.pagePanel.Size = new System.Drawing.Size(827, 821);
             this.pagePanel.TabIndex = 10;
             this.pagePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.pagePanel_Paint);
+            // 
+            // dashBoardControl1
+            // 
+            this.dashBoardControl1.BackColor = System.Drawing.Color.GhostWhite;
+            this.dashBoardControl1.Location = new System.Drawing.Point(4, 3);
+            this.dashBoardControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.dashBoardControl1.Name = "dashBoardControl1";
+            this.dashBoardControl1.Size = new System.Drawing.Size(846, 814);
+            this.dashBoardControl1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -176,13 +188,15 @@
             this.ClientSize = new System.Drawing.Size(1104, 816);
             this.Controls.Add(this.pagePanel);
             this.Controls.Add(this.sideBarPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.sideBarPanel.ResumeLayout(false);
             this.sideBarPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chronoLogo)).EndInit();
+            this.pagePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -200,6 +214,7 @@
         private System.Windows.Forms.PictureBox chronoLogo;
         public System.Windows.Forms.Button taskNavButton;
         private System.Windows.Forms.Panel pagePanel;
+        private dashBoardControl dashBoardControl1;
     }
-}
+
 }

@@ -264,5 +264,37 @@ namespace Chrono
         {
             editPriority = "High";
         }
+
+        public int GetTaskCount()
+        {
+            return tasksList.Count;
+        }
+
+        public int GetCompletedCount()
+        {
+            return tasksList.Count(t => t.TaskStatus.ToLower() == "completed");
+        }
+
+        public int GetPendingCount()
+        {
+            return tasksList.Count(t => t.TaskStatus.ToLower() == "pending");
+        }
+
+        public int GetMissedCount()
+        {
+            return tasksList.Count(t => t.TaskStatus.ToLower() == "missed");
+        }
+
+        public double GetCompletionRate()
+        {
+            int total = GetTaskCount();
+            if (total == 0) return 0;
+            return (double)GetCompletedCount() / total * 100;
+        }
+
+        private void taskListPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

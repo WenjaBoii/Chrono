@@ -49,7 +49,7 @@ namespace Chrono
         private void StartTimer()
         {
             timer = new Timer();
-            timer.Interval = rnd.Next(180000, 300001); // 3-5 min
+            timer.Interval = rnd.Next(180000, 300001); // 3-5 minutes
             timer.Tick += (s, e) => {
                 ShowTips();
                 timer.Interval = rnd.Next(180000, 300001);
@@ -90,7 +90,7 @@ namespace Chrono
             panel.Controls.Add(lbl);
         }
 
-        public void AddNotif(string msg, string type)
+        private void panel8_Paint(object sender, PaintEventArgs e)
         {
 
         }
