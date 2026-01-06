@@ -13,32 +13,13 @@ namespace Chrono
     public partial class tipsContro_ : UserControl
     {
         private List<string> tips;
-        private List<Notification> notifs;
         private Random rnd;
         private Timer timer;
-        private bool showAll = true;
-
-        public class Notification
-        {
-            public string Message { get; set; }
-            public DateTime Time { get; set; }
-            public bool IsRead { get; set; }
-            public string Type { get; set; }
-
-            public Notification(string msg, string type)
-            {
-                Message = msg;
-                Time = DateTime.Now;
-                IsRead = false;
-                Type = type;
-            }
-        }
 
         public tipsContro_()
         {
             InitializeComponent();
             LoadTips();
-            SetupButtons();
             StartTimer();
         }
 
@@ -63,15 +44,6 @@ namespace Chrono
                 "Review your methods regularly",
                 "Exercise for mental clarity"
             };
-
-            notifs = new List<Notification>();
-            AddNotif("Welcome to Chrono!", "Daily");
-        }
-
-        private void SetupButtons()
-        {
-            allButton.Click += (s, e) => FilterAll();
-            buttonUnread.Click += (s, e) => FilterUnread();
         }
 
         private void StartTimer()
@@ -120,60 +92,7 @@ namespace Chrono
 
         public void AddNotif(string msg, string type)
         {
-            notifs.Insert(0, new Notification(msg, type));
-            UpdateNotifs();
-        }
 
-        private void FilterAll()
-        {
-            showAll = true;
-            allButton.BackColor = Color.Black;
-            allButton.ForeColor = Color.White;
-            buttonUnread.BackColor = Color.White;
-            buttonUnread.ForeColor = Color.Black;
-            UpdateNotifs();
-        }
-
-        private void FilterUnread()
-        {
-            showAll = false;
-            buttonUnread.BackColor = Color.Black;
-            buttonUnread.ForeColor = Color.White;
-            allButton.BackColor = Color.White;
-            allButton.ForeColor = Color.Black;
-            UpdateNotifs();
-        }
-
-        private void UpdateNotifs()
-        {
-            var display = showAll ? notifs : notifs.Where(n => !n.IsRead).ToList();
-
-            if (display.Count == 0)
-            {
-                notificationText.Visible = true;
-                notificationText.Text = "No notification";
-            }
-            else
-            {
-                notificationText.Visible = false;
-                // You can add notification cards here if needed
-            }
-        }
-
-        public void MarkRead(Notification n)
-        {
-            n.IsRead = true;
-            UpdateNotifs();
-        }
-
-        public void NotifyTimer(bool isWork)
-        {
-            AddNotif(isWork ? "Work done! Take a break" : "Break over! Back to work", "Timer");
-        }
-
-        public void NotifyTask(string task)
-        {
-            AddNotif($"Reminder: {task}", "Task");
         }
     }
 }

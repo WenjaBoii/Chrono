@@ -159,38 +159,6 @@
             this.sideBarTitle.TabIndex = 0;
             this.sideBarTitle.Text = "Chrono ";
             // 
-            // proTipContainer
-            // 
-            this.proTipContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.proTipContainer.Controls.Add(this.label3);
-            this.proTipContainer.Location = new System.Drawing.Point(24, 9);
-            this.proTipContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.proTipContainer.Name = "proTipContainer";
-            this.proTipContainer.Size = new System.Drawing.Size(257, 167);
-            this.proTipContainer.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 14);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Pro Tip";
-            // 
-            // proTipPanel
-            // 
-            this.proTipPanel.BackColor = System.Drawing.Color.Azure;
-            this.proTipPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.proTipPanel.Controls.Add(this.proTipContainer);
-            this.proTipPanel.Location = new System.Drawing.Point(-15, 624);
-            this.proTipPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.proTipPanel.Name = "proTipPanel";
-            this.proTipPanel.Size = new System.Drawing.Size(294, 201);
-            this.proTipPanel.TabIndex = 9;
-            this.proTipPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
-            // 
             // pagePanel
             // 
             this.pagePanel.Location = new System.Drawing.Point(276, 0);
@@ -234,4 +202,4 @@
         private System.Windows.Forms.Panel pagePanel;
     }
 }
-
+}
