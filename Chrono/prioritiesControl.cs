@@ -29,7 +29,10 @@ namespace Chrono
 
         public void RefreshPriorityTask()
         {
-            if (sourceTask == null) return;
+
+           
+
+            if (_actualSource == null) return;
 
             urgentTaskList.Controls.Clear();
 

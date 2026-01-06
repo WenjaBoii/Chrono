@@ -14,10 +14,19 @@ namespace Chrono
 {
     public partial class InsightsControl : UserControl
     {
-        public InsightsControl()  
+        // Add these fields to store the current user ID
+        private int _currentUserId;
+
+        public int CurrentUserId
+        {
+            get => _currentUserId;
+            set => _currentUserId = value;
+        }
+
+        public InsightsControl()
         {
             InitializeComponent();
-            this.Load += insightsControl_Load; 
+            this.Load += insightsControl_Load;
         }
 
         private void insightsControl_Load(object sender, EventArgs e)
@@ -224,7 +233,7 @@ namespace Chrono
 
         private void insightPanel_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -234,11 +243,18 @@ namespace Chrono
 
         private void buttonWeek_Click(object sender, EventArgs e)
         {
+            /*
             var insights = GetProductivityHighlights(CurrentUserId, "week");
             DisplayInsights(insights);
+            */
         }
 
         private void mostproductiveDay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }

@@ -18,7 +18,6 @@ namespace Chrono
         {
             InitializeComponent();
             checkIfNull();
-            
         }
 
         string setPriority;
@@ -82,18 +81,30 @@ namespace Chrono
             statusComboBox.SelectedItem = -1;
             dateTimeDropdownBox.Value = DateTime.Now;
 
+            RefreshDashboard(); // Update dashboard
         }
-      public void onTaskItemRequestCancel(object sender, EventArgs e)
+
+        public void onTaskItemRequestCancel(object sender, EventArgs e)
         {
             currentlyDeletingTask = sender as taskItemGraphics;
 
             if (sender is taskItemGraphics item)
             {
                 item.Parent.Controls.Remove(item);
+                tasksList.Remove(item);  // Remove from linked list
                 item.Dispose();
             }
 
-        }   
+            this.editTaskPanel.Visible = false;
+            this.taskListFlowLayout.Visible = false;
+            this.tasksPanel.Visible = true;
+            this.tasksPanel.BringToFront();
+            this.taskListPanel.Visible = true;
+            this.taskListPanel.BringToFront();
+            editTitleTextBox.Clear();
+
+            RefreshDashboard(); // Update dashboard
+        }
 
         public void onTaskItemRequestEdit(object sender, EventArgs e)
         {
@@ -106,7 +117,7 @@ namespace Chrono
             this.editTaskPanel.BringToFront();
             taskListFlowLayout.Visible = false;
 
-            if(sender is taskItemGraphics clickeditem)
+            if (sender is taskItemGraphics clickeditem)
             {
                 currentlyEditingTask = clickeditem;
                 DateTime dateValue = currentlyEditingTask.deadline;
@@ -123,9 +134,7 @@ namespace Chrono
                 {
                     this.editPanelDateTimePicker.Value = DateTime.Today;
                 }
-
             }
-
         }
 
         public void findTask()
@@ -139,14 +148,11 @@ namespace Chrono
             findItemClass.setVisibility<taskItemGraphics>(tasksList,
                 t => t.TaskTitle.Equals(searchBar.Text), true);
 
-
             foreach (var tasks in tasksList)
             {
-
                 taskListFlowLayout.Controls.Add(tasks);
                 Console.WriteLine(tasks.TaskTitle);
             }
-
         }
 
         public void createTaskPanelVisible(bool status)
@@ -161,7 +167,6 @@ namespace Chrono
         {
             createTaskPanelVisible(true);
             checkIfNull();
-
         }
 
         private void createTaskButton_Click(object sender, EventArgs e)
@@ -169,10 +174,8 @@ namespace Chrono
             createTaskPanelVisible(true);
         }
 
-
         public void buttonCreateTask_Click_1(object sender, EventArgs e)
         {
-
             createTask();
             if (LinkedPrioritiesControl != null)
             {
@@ -222,7 +225,7 @@ namespace Chrono
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            // Empty or placeholder
         }
 
         private void cancelSearchButton_Click(object sender, EventArgs e)
@@ -238,16 +241,18 @@ namespace Chrono
 
         private void zz_Click(object sender, EventArgs e)
         {
-              currentlyEditingTask.TaskTitle = editTitleTextBox.Text;
-        currentlyEditingTask.TaskStatus = editStatusComboBox.Text;
-            currentlyEditingTask.deadline= editPanelDateTimePicker.Value;
-        currentlyEditingTask.TaskPriority = editPriority;
+            currentlyEditingTask.TaskTitle = editTitleTextBox.Text;
+            currentlyEditingTask.TaskStatus = editStatusComboBox.Text;
+            currentlyEditingTask.deadline = editPanelDateTimePicker.Value;
+            currentlyEditingTask.TaskPriority = editPriority;
 
             editTaskPanel.Visible = false;
             taskListFlowLayout.Visible = true;
             taskListFlowLayout.BringToFront();
 
             editTitleTextBox.Clear();
+
+            RefreshDashboard(); // Update dashboard
         }
 
         private void lowPriorityButtonEdit_Click(object sender, EventArgs e)
@@ -309,6 +314,5 @@ namespace Chrono
                 }
             }
         }
-
     }
 }

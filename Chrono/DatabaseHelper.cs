@@ -1,25 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 namespace Chrono
 {
-
-
-        public static class DatabaseHelper
+    public static class DatabaseHelper
     {
-        // returns a new MySQL connection object
+        // Hardcoded connection string - update with your MySQL details
+        private static string connectionString = "Server=10.153.174.183;Database=2dchrono_db;Uid=chrono_user;Pwd=cs2dgroup1;";
+
+        // Returns a new MySQL connection object
         public static MySqlConnection GetConnection()
         {
-            return new MySqlConnection(
-                ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString);
+            return new MySqlConnection(connectionString);
         }
 
-        // optional: test if the database is reachable
+        // Optional: test if the database is reachable
         public static bool TestConnection()
         {
             try
@@ -37,10 +32,3 @@ namespace Chrono
         }
     }
 }
-
-
-    internal class DatabaseHelper
-    {
-    }
-
-    
