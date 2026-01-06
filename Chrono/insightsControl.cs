@@ -41,6 +41,7 @@ namespace Chrono
             {
                 using (var conn = DatabaseHelper.GetConnection())
                 {
+                    /*
                     conn.Open();
 
                     // totals tasks 
@@ -83,6 +84,7 @@ namespace Chrono
                         completionrateNumber.ForeColor = Color.Orange;
                     else
                         completionrateNumber.ForeColor = Color.Red;
+                    */
                 }
             }
             catch (Exception ex)
@@ -243,8 +245,10 @@ namespace Chrono
 
         private void buttonWeek_Click(object sender, EventArgs e)
         {
+            /*
             var insights = GetProductivityHighlights(CurrentUserId, "week");
             DisplayInsights(insights);
+            */
         }
 
         private void mostproductiveDay_Click(object sender, EventArgs e)

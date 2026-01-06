@@ -39,7 +39,7 @@
             this.sideBarMotto = new System.Windows.Forms.Label();
             this.sideBarTitle = new System.Windows.Forms.Label();
             this.pagePanel = new System.Windows.Forms.Panel();
-            this.insightsControl1 = new Chrono.insightsControl();
+            this.insightsControl1 = new Chrono.InsightsControl();
             this.tipsContro_1 = new Chrono.tipsContro_();
             this.focusTimerControl1 = new Chrono.focusTimerControl();
             this.prioritiesControl1 = new Chrono.prioritiesControl();
@@ -172,7 +172,6 @@
             this.pagePanel.Name = "pagePanel";
             this.pagePanel.Size = new System.Drawing.Size(827, 821);
             this.pagePanel.TabIndex = 10;
-            this.pagePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.pagePanel_Paint);
             // 
             // insightsControl1
             // 
@@ -245,7 +244,7 @@
         public System.Windows.Forms.Button taskNavButton;
         private System.Windows.Forms.Panel pagePanel;
         private tipsContro_ tipsContro_1;
-        private insightsControl insightsControl1;
+        private InsightsControl insightsControl1;
         private tasksControl tasksControl1;
         private prioritiesControl prioritiesControl1;
         private focusTimerControl focusTimerControl1;
