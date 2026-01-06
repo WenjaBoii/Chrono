@@ -26,9 +26,9 @@ namespace Chrono
         string editPriority;
         string dateTime;
 
-        LinkedList<taskItemGraphics> tasksList = new LinkedList<taskItemGraphics>();
-       public LinkedList<taskItemGraphics> allTask => tasksList;
-        taskItemGraphics newTask;
+       public LinkedList<taskItemGraphics> tasksList = new LinkedList<taskItemGraphics>();
+      public prioritiesControl LinkedPrioritiesControl { get; set; }
+      
 
         private taskItemGraphics currentlyEditingTask;
         private taskItemGraphics currentlyDeletingTask;
@@ -45,12 +45,6 @@ namespace Chrono
             }
         }
 
-        public taskItemGraphics NewTask 
-        {
-            get { return newTask; }
-            set {newTask = value; }
-        }
-
         public void checkIfNull()
         {
             if (titleTextBox == null || setPriority == null ||
@@ -65,15 +59,13 @@ namespace Chrono
         }
 
         
-
         public void createTask()
         {
-
-           newTask = new taskItemGraphics(titleTextBox.Text, statusComboBox.Text,
+            taskItemGraphics newTask = new taskItemGraphics(titleTextBox.Text, statusComboBox.Text,
                                             dateTimeDropdownBox.Value, setPriority);
 
             newTask.ClickRequest += onTaskItemRequestEdit;
-            newTask.ClickCancel += onTaskItemRequestCancel; 
+            newTask.ClickCancel += onTaskItemRequestCancel;
 
             tasksList.AddFirst(newTask);
 
@@ -101,15 +93,6 @@ namespace Chrono
                 item.Dispose();
             }
 
-            this.editTaskPanel.Visible = false;
-            this.taskListFlowLayout.Visible = false;
-            this.tasksPanel.Visible = true;
-            this.tasksPanel.BringToFront(); 
-            this.taskListPanel.Visible = true;
-            this.taskListPanel.BringToFront();   
-            editTitleTextBox.Clear();
-
-            currentlyDeletingTask.Dispose();    
         }   
 
         public void onTaskItemRequestEdit(object sender, EventArgs e)
@@ -191,6 +174,12 @@ namespace Chrono
         {
 
             createTask();
+            if (LinkedPrioritiesControl != null)
+            {
+
+                LinkedPrioritiesControl.setSource = tasksList.First.Value;
+                LinkedPrioritiesControl.RefreshPriorityTask();
+            }
         }
 
         private void buttonAddTaskCancel_Click(object sender, EventArgs e)

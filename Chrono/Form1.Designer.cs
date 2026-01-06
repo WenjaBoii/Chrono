@@ -1,4 +1,6 @@
-﻿namespace Chrono
+﻿using System.Collections.Generic;
+
+namespace Chrono
 {
     partial class Form1
     {
@@ -207,7 +209,6 @@
             this.tasksControl1.editTaskPanelVisibleStatus = false;
             this.tasksControl1.Location = new System.Drawing.Point(0, 0);
             this.tasksControl1.Name = "tasksControl1";
-            this.tasksControl1.NewTask = null;
             this.tasksControl1.Size = new System.Drawing.Size(620, 667);
             this.tasksControl1.TabIndex = 3;
             // 
@@ -253,6 +254,8 @@
             this.Controls.Add(this.pagePanel);
             this.Controls.Add(this.proTipPanel);
             this.Controls.Add(this.sideBarPanel);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";

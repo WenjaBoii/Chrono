@@ -12,13 +12,13 @@
     {
         public partial class Form1 : Form
         {
-
+            
             public Form1()
             {
                 InitializeComponent();
+            tasksControl1.LinkedPrioritiesControl = prioritiesControl1;
 
- 
-            }
+        }
 
             public void changePage(int pageNumber)
             {
@@ -37,9 +37,7 @@
                     case 3:
 
                         prioritiesControl1.BringToFront();
-                        prioritiesControl1.SetSource(tasksControl1);
-                        prioritiesControl1.RefreshPriorityTask();
-
+                       
                         break;
 
                     case 4:
