@@ -39,7 +39,11 @@
             this.sideBarMotto = new System.Windows.Forms.Label();
             this.sideBarTitle = new System.Windows.Forms.Label();
             this.pagePanel = new System.Windows.Forms.Panel();
-            this.dashBoardControl1 = new Chrono.dashBoardControl();
+            this.insightsControl1 = new Chrono.insightsControl();
+            this.tipsContro_1 = new Chrono.tipsContro_();
+            this.focusTimerControl1 = new Chrono.focusTimerControl();
+            this.prioritiesControl1 = new Chrono.prioritiesControl();
+            this.tasksControl1 = new Chrono.tasksControl();
             this.sideBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chronoLogo)).BeginInit();
             this.pagePanel.SuspendLayout();
@@ -163,22 +167,48 @@
             // 
             // pagePanel
             // 
-            this.pagePanel.Controls.Add(this.dashBoardControl1);
             this.pagePanel.Location = new System.Drawing.Point(276, 0);
-            this.pagePanel.Margin = new System.Windows.Forms.Padding(4);
+            this.pagePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pagePanel.Name = "pagePanel";
             this.pagePanel.Size = new System.Drawing.Size(827, 821);
             this.pagePanel.TabIndex = 10;
             this.pagePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.pagePanel_Paint);
             // 
-            // dashBoardControl1
+            // insightsControl1
             // 
-            this.dashBoardControl1.BackColor = System.Drawing.Color.GhostWhite;
-            this.dashBoardControl1.Location = new System.Drawing.Point(4, 3);
-            this.dashBoardControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.dashBoardControl1.Name = "dashBoardControl1";
-            this.dashBoardControl1.Size = new System.Drawing.Size(846, 814);
-            this.dashBoardControl1.TabIndex = 0;
+            this.insightsControl1.Location = new System.Drawing.Point(3, 3);
+            this.insightsControl1.Name = "insightsControl1";
+            this.insightsControl1.Size = new System.Drawing.Size(614, 661);
+            this.insightsControl1.TabIndex = 0;
+            // 
+            // tipsContro_1
+            // 
+            this.tipsContro_1.Location = new System.Drawing.Point(0, 0);
+            this.tipsContro_1.Name = "tipsContro_1";
+            this.tipsContro_1.Size = new System.Drawing.Size(617, 664);
+            this.tipsContro_1.TabIndex = 1;
+            // 
+            // focusTimerControl1
+            // 
+            this.focusTimerControl1.Location = new System.Drawing.Point(3, 0);
+            this.focusTimerControl1.Name = "focusTimerControl1";
+            this.focusTimerControl1.Size = new System.Drawing.Size(627, 664);
+            this.focusTimerControl1.TabIndex = 0;
+            // 
+            // prioritiesControl1
+            // 
+            this.prioritiesControl1.Location = new System.Drawing.Point(3, 0);
+            this.prioritiesControl1.Name = "prioritiesControl1";
+            this.prioritiesControl1.Size = new System.Drawing.Size(617, 651);
+            this.prioritiesControl1.TabIndex = 2;
+            // 
+            // tasksControl1
+            // 
+            this.tasksControl1.editTaskPanelVisibleStatus = false;
+            this.tasksControl1.Location = new System.Drawing.Point(0, 0);
+            this.tasksControl1.Name = "tasksControl1";
+            this.tasksControl1.Size = new System.Drawing.Size(619, 664);
+            this.tasksControl1.TabIndex = 3;
             // 
             // Form1
             // 
@@ -214,7 +244,12 @@
         private System.Windows.Forms.PictureBox chronoLogo;
         public System.Windows.Forms.Button taskNavButton;
         private System.Windows.Forms.Panel pagePanel;
-        private dashBoardControl dashBoardControl1;
+        private tipsContro_ tipsContro_1;
+        private insightsControl insightsControl1;
+        private tasksControl tasksControl1;
+        private prioritiesControl prioritiesControl1;
+        private focusTimerControl focusTimerControl1;
     }
+}
 
 }

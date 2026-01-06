@@ -27,6 +27,9 @@ namespace Chrono
         string dateTime;
 
         LinkedList<taskItemGraphics> tasksList = new LinkedList<taskItemGraphics>();
+       public LinkedList<taskItemGraphics> allTask => tasksList;
+        taskItemGraphics newTask;
+
         private taskItemGraphics currentlyEditingTask;
         private taskItemGraphics currentlyDeletingTask;
 
@@ -40,6 +43,12 @@ namespace Chrono
                 editTaskPanel.Enabled = value;
                 taskListFlowLayout.Visible = value == false;
             }
+        }
+
+        public taskItemGraphics NewTask 
+        {
+            get { return newTask; }
+            set {newTask = value; }
         }
 
         public void checkIfNull()
@@ -60,7 +69,7 @@ namespace Chrono
         public void createTask()
         {
 
-            taskItemGraphics newTask = new taskItemGraphics(titleTextBox.Text, statusComboBox.Text,
+           newTask = new taskItemGraphics(titleTextBox.Text, statusComboBox.Text,
                                             dateTimeDropdownBox.Value, setPriority);
 
             newTask.ClickRequest += onTaskItemRequestEdit;
@@ -68,11 +77,10 @@ namespace Chrono
 
 
             tasksList.AddFirst(newTask);
-            tasksList.AddLast(newTask);
+
             foreach (var tasks in tasksList)
             {
                 taskListFlowLayout.Controls.Add(tasks);
-                Console.WriteLine(tasks.TaskTitle);
             }
 
 
@@ -88,7 +96,13 @@ namespace Chrono
         }
       public void onTaskItemRequestCancel(object sender, EventArgs e)
         {
-            currentlyDeletingTask = sender as taskItemGraphics; 
+            currentlyDeletingTask = sender as taskItemGraphics;
+
+            if (sender is taskItemGraphics item)
+            {
+                item.Parent.Controls.Remove(item);
+                item.Dispose();
+            }
 
             this.editTaskPanel.Visible = false;
             this.taskListFlowLayout.Visible = false;
@@ -265,36 +279,6 @@ namespace Chrono
             editPriority = "High";
         }
 
-        public int GetTaskCount()
-        {
-            return tasksList.Count;
-        }
-
-        public int GetCompletedCount()
-        {
-            return tasksList.Count(t => t.TaskStatus.ToLower() == "completed");
-        }
-
-        public int GetPendingCount()
-        {
-            return tasksList.Count(t => t.TaskStatus.ToLower() == "pending");
-        }
-
-        public int GetMissedCount()
-        {
-            return tasksList.Count(t => t.TaskStatus.ToLower() == "missed");
-        }
-
-        public double GetCompletionRate()
-        {
-            int total = GetTaskCount();
-            if (total == 0) return 0;
-            return (double)GetCompletedCount() / total * 100;
-        }
-
-        private void taskListPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

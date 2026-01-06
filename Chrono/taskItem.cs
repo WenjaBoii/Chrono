@@ -16,6 +16,8 @@ namespace Chrono
         public taskItemGraphics()
         {
             InitializeComponent();
+
+      
         }
 
         tasksControl parentPanel = Application.OpenForms.OfType<tasksControl>().FirstOrDefault();
@@ -70,10 +72,10 @@ namespace Chrono
         {
             InitializeComponent();
 
-            TaskTitle = taskName;
-            TaskStatus = status;
+            this.TaskTitle = taskName;
+            this.TaskStatus = status;
             this.deadline = deadline;
-            TaskPriority = priority;
+            this.TaskPriority = priority;
         }
         
         private void deleteButtonTaskItem_Click(object sender, EventArgs e)
