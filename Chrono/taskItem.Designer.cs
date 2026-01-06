@@ -51,14 +51,14 @@
             this.panel1.Controls.Add(this.titleLabel);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(581, 118);
+            this.panel1.Size = new System.Drawing.Size(277, 118);
             this.panel1.TabIndex = 0;
             // 
             // taskItemEditButton
             // 
             this.taskItemEditButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.taskItemEditButton.ForeColor = System.Drawing.Color.White;
-            this.taskItemEditButton.Location = new System.Drawing.Point(503, 85);
+            this.taskItemEditButton.Location = new System.Drawing.Point(199, 85);
             this.taskItemEditButton.Name = "taskItemEditButton";
             this.taskItemEditButton.Size = new System.Drawing.Size(75, 23);
             this.taskItemEditButton.TabIndex = 6;
@@ -69,7 +69,7 @@
             // deleteButtonTaskItem
             // 
             this.deleteButtonTaskItem.BackColor = System.Drawing.Color.Red;
-            this.deleteButtonTaskItem.Location = new System.Drawing.Point(422, 85);
+            this.deleteButtonTaskItem.Location = new System.Drawing.Point(118, 85);
             this.deleteButtonTaskItem.Name = "deleteButtonTaskItem";
             this.deleteButtonTaskItem.Size = new System.Drawing.Size(75, 23);
             this.deleteButtonTaskItem.TabIndex = 5;
@@ -111,7 +111,7 @@
             // 
             this.statusLabel.AutoSize = true;
             this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLabel.Location = new System.Drawing.Point(500, 13);
+            this.statusLabel.Location = new System.Drawing.Point(210, 13);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(64, 16);
             this.statusLabel.TabIndex = 1;
@@ -133,7 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "taskItemGraphics";
-            this.Size = new System.Drawing.Size(581, 118);
+            this.Size = new System.Drawing.Size(278, 118);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

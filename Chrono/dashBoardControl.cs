@@ -21,8 +21,17 @@ namespace Chrono
         {
             RefreshDashboard();
         }
+        private void RefreshDashboard()
+        {
+            int totalTasks = 0;
+            int completedTasks = 0;
+            int pendingTasks = 0;
+            int inProgressTasks = 0;
 
-        pu
+            SetLabel("lblTotalTasks", totalTasks.ToString());
+            SetLabel("lblCompleted", completedTasks.ToString());
+            SetLabel("lblPending", pendingTasks.ToString());
+            SetLabel("lblInProgress", inProgressTasks.ToString());
         }
 
         private void SetLabel(string name, string value)

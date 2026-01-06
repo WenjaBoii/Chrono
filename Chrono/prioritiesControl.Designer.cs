@@ -35,21 +35,21 @@
             this.highPriorityText = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.upcomingTaskPanel = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.upcomingTaskBodyInfo = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.upcomingTaskHeader = new System.Windows.Forms.Panel();
             this.upcomingTaskInfoText = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.upcomingTaskText = new System.Windows.Forms.Label();
             this.urgentTaskPanel = new System.Windows.Forms.Panel();
+            this.urgentTaskList = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.urgentTaskBodyText = new System.Windows.Forms.Label();
             this.urgentTaskHeader = new System.Windows.Forms.Panel();
             this.urgentTaskInfoText = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.urgentTaskText = new System.Windows.Forms.Label();
-            this.urgentTaskList = new System.Windows.Forms.FlowLayoutPanel();
             this.priorityDashboardHeaderPanel = new System.Windows.Forms.Panel();
             this.priorityMessageText = new System.Windows.Forms.Label();
             this.priorityDashboardText = new System.Windows.Forms.Label();
@@ -141,6 +141,15 @@
             this.upcomingTaskPanel.Size = new System.Drawing.Size(584, 278);
             this.upcomingTaskPanel.TabIndex = 6;
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(2, 69);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(580, 208);
+            this.flowLayoutPanel2.TabIndex = 6;
+            // 
             // upcomingTaskBodyInfo
             // 
             this.upcomingTaskBodyInfo.AutoSize = true;
@@ -160,15 +169,6 @@
             this.pictureBox3.Size = new System.Drawing.Size(41, 36);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(2, 69);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(580, 208);
-            this.flowLayoutPanel2.TabIndex = 6;
             // 
             // upcomingTaskHeader
             // 
@@ -225,6 +225,16 @@
             this.urgentTaskPanel.Name = "urgentTaskPanel";
             this.urgentTaskPanel.Size = new System.Drawing.Size(586, 221);
             this.urgentTaskPanel.TabIndex = 1;
+            // 
+            // urgentTaskList
+            // 
+            this.urgentTaskList.AutoScroll = true;
+            this.urgentTaskList.BackColor = System.Drawing.Color.White;
+            this.urgentTaskList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.urgentTaskList.Location = new System.Drawing.Point(0, 63);
+            this.urgentTaskList.Name = "urgentTaskList";
+            this.urgentTaskList.Size = new System.Drawing.Size(583, 159);
+            this.urgentTaskList.TabIndex = 5;
             // 
             // pictureBox2
             // 
@@ -289,17 +299,6 @@
             this.urgentTaskText.TabIndex = 2;
             this.urgentTaskText.Text = "Urgent Tasks";
             // 
-            // urgentTaskList
-            // 
-            this.urgentTaskList.AutoScroll = true;
-            this.urgentTaskList.AutoSize = true;
-            this.urgentTaskList.BackColor = System.Drawing.Color.White;
-            this.urgentTaskList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.urgentTaskList.Location = new System.Drawing.Point(0, 63);
-            this.urgentTaskList.Name = "urgentTaskList";
-            this.urgentTaskList.Size = new System.Drawing.Size(583, 159);
-            this.urgentTaskList.TabIndex = 5;
-            // 
             // priorityDashboardHeaderPanel
             // 
             this.priorityDashboardHeaderPanel.BackColor = System.Drawing.Color.Transparent;
@@ -340,7 +339,7 @@
             this.AutoScroll = true;
             this.Controls.Add(this.priorityPanel);
             this.Name = "prioritiesControl";
-            this.Size = new System.Drawing.Size(609, 661);
+            this.Size = new System.Drawing.Size(606, 661);
             this.priorityPanel.ResumeLayout(false);
             this.priorityColorGuidePanel.ResumeLayout(false);
             this.priorityColorGuidePanel.PerformLayout();

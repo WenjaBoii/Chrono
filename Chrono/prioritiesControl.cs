@@ -13,12 +13,12 @@ namespace Chrono
     public partial class prioritiesControl : UserControl
     {
         private taskItemGraphics sourceTask;
-       private static LinkedList<taskItemGraphics> copiedTaskList = new LinkedList<taskItemGraphics>();
+        private static LinkedList<taskItemGraphics> copiedTaskList = new LinkedList<taskItemGraphics>();
 
         public prioritiesControl()
         {
             InitializeComponent();
-           
+
         }
 
         public taskItemGraphics setSource
@@ -34,24 +34,20 @@ namespace Chrono
             urgentTaskList.Controls.Clear();
 
             taskItemGraphics copiedTask = new taskItemGraphics(sourceTask.TaskTitle, sourceTask.TaskStatus, sourceTask.deadline, sourceTask.TaskStatus);
-            
+
             copiedTaskList.AddFirst(copiedTask);
-            copiedTask.Size = new Size(100, 700);
 
             foreach (var task in copiedTaskList)
             {
                 if (task.deadline <= DateTime.Now.AddDays(1))
-                { 
+                {
                     urgentTaskList.Controls.Add(task);
                 }
             }
 
-            Console.WriteLine($"number of task: {copiedTaskList.Count}");
-            Console.WriteLine($"number of task: {urgentTaskList.Controls.Count}");
-
             urgentTaskList.BringToFront();
-            urgentTaskList.ResumeLayout(true); 
-            urgentTaskList.PerformLayout();    
+            urgentTaskList.ResumeLayout(true);
+            urgentTaskList.PerformLayout();
             urgentTaskList.Invalidate();
         }
     }
