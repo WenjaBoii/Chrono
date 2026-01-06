@@ -139,4 +139,9 @@
                 changePage(6);
             }
         }
+
+        private void pagePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }

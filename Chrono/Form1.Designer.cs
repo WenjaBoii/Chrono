@@ -38,9 +38,6 @@
             this.chronoLogo = new System.Windows.Forms.PictureBox();
             this.sideBarMotto = new System.Windows.Forms.Label();
             this.sideBarTitle = new System.Windows.Forms.Label();
-            this.proTipContainer = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.proTipPanel = new System.Windows.Forms.Panel();
             this.pagePanel = new System.Windows.Forms.Panel();
             this.insightsControl1 = new Chrono.insightsControl();
             this.tipsContro_1 = new Chrono.tipsContro_();
@@ -67,16 +64,18 @@
             this.sideBarPanel.Controls.Add(this.chronoLogo);
             this.sideBarPanel.Controls.Add(this.sideBarMotto);
             this.sideBarPanel.Controls.Add(this.sideBarTitle);
-            this.sideBarPanel.Location = new System.Drawing.Point(-2, -4);
+            this.sideBarPanel.Location = new System.Drawing.Point(-3, -5);
+            this.sideBarPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sideBarPanel.Name = "sideBarPanel";
-            this.sideBarPanel.Size = new System.Drawing.Size(212, 524);
+            this.sideBarPanel.Size = new System.Drawing.Size(282, 644);
             this.sideBarPanel.TabIndex = 0;
             // 
             // insightsNavButton
             // 
-            this.insightsNavButton.Location = new System.Drawing.Point(11, 374);
+            this.insightsNavButton.Location = new System.Drawing.Point(15, 460);
+            this.insightsNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.insightsNavButton.Name = "insightsNavButton";
-            this.insightsNavButton.Size = new System.Drawing.Size(188, 56);
+            this.insightsNavButton.Size = new System.Drawing.Size(251, 69);
             this.insightsNavButton.TabIndex = 7;
             this.insightsNavButton.Text = "Insights";
             this.insightsNavButton.UseVisualStyleBackColor = true;
@@ -84,9 +83,10 @@
             // 
             // tipsNavButton
             // 
-            this.tipsNavButton.Location = new System.Drawing.Point(11, 312);
+            this.tipsNavButton.Location = new System.Drawing.Point(15, 384);
+            this.tipsNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tipsNavButton.Name = "tipsNavButton";
-            this.tipsNavButton.Size = new System.Drawing.Size(188, 56);
+            this.tipsNavButton.Size = new System.Drawing.Size(251, 69);
             this.tipsNavButton.TabIndex = 6;
             this.tipsNavButton.Text = "Tips";
             this.tipsNavButton.UseVisualStyleBackColor = true;
@@ -94,9 +94,10 @@
             // 
             // focusTimerNavButton
             // 
-            this.focusTimerNavButton.Location = new System.Drawing.Point(11, 250);
+            this.focusTimerNavButton.Location = new System.Drawing.Point(15, 308);
+            this.focusTimerNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.focusTimerNavButton.Name = "focusTimerNavButton";
-            this.focusTimerNavButton.Size = new System.Drawing.Size(188, 56);
+            this.focusTimerNavButton.Size = new System.Drawing.Size(251, 69);
             this.focusTimerNavButton.TabIndex = 5;
             this.focusTimerNavButton.Text = "Focus Timer";
             this.focusTimerNavButton.UseVisualStyleBackColor = true;
@@ -104,9 +105,10 @@
             // 
             // priorityNavButton
             // 
-            this.priorityNavButton.Location = new System.Drawing.Point(12, 188);
+            this.priorityNavButton.Location = new System.Drawing.Point(16, 231);
+            this.priorityNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.priorityNavButton.Name = "priorityNavButton";
-            this.priorityNavButton.Size = new System.Drawing.Size(188, 56);
+            this.priorityNavButton.Size = new System.Drawing.Size(251, 69);
             this.priorityNavButton.TabIndex = 4;
             this.priorityNavButton.Text = "Priority";
             this.priorityNavButton.UseVisualStyleBackColor = true;
@@ -114,9 +116,10 @@
             // 
             // taskNavButton
             // 
-            this.taskNavButton.Location = new System.Drawing.Point(9, 126);
+            this.taskNavButton.Location = new System.Drawing.Point(12, 155);
+            this.taskNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.taskNavButton.Name = "taskNavButton";
-            this.taskNavButton.Size = new System.Drawing.Size(188, 56);
+            this.taskNavButton.Size = new System.Drawing.Size(251, 69);
             this.taskNavButton.TabIndex = 3;
             this.taskNavButton.Text = "Tasks";
             this.taskNavButton.UseVisualStyleBackColor = true;
@@ -124,9 +127,10 @@
             // 
             // dashBoardNavButton
             // 
-            this.dashBoardNavButton.Location = new System.Drawing.Point(11, 64);
+            this.dashBoardNavButton.Location = new System.Drawing.Point(15, 79);
+            this.dashBoardNavButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dashBoardNavButton.Name = "dashBoardNavButton";
-            this.dashBoardNavButton.Size = new System.Drawing.Size(188, 56);
+            this.dashBoardNavButton.Size = new System.Drawing.Size(251, 69);
             this.dashBoardNavButton.TabIndex = 2;
             this.dashBoardNavButton.Text = "Dashboard";
             this.dashBoardNavButton.UseVisualStyleBackColor = true;
@@ -134,18 +138,20 @@
             // 
             // chronoLogo
             // 
-            this.chronoLogo.Location = new System.Drawing.Point(14, 16);
+            this.chronoLogo.Location = new System.Drawing.Point(19, 20);
+            this.chronoLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chronoLogo.Name = "chronoLogo";
-            this.chronoLogo.Size = new System.Drawing.Size(45, 37);
+            this.chronoLogo.Size = new System.Drawing.Size(60, 46);
             this.chronoLogo.TabIndex = 1;
             this.chronoLogo.TabStop = false;
             // 
             // sideBarMotto
             // 
             this.sideBarMotto.AutoSize = true;
-            this.sideBarMotto.Location = new System.Drawing.Point(60, 38);
+            this.sideBarMotto.Location = new System.Drawing.Point(80, 47);
+            this.sideBarMotto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sideBarMotto.Name = "sideBarMotto";
-            this.sideBarMotto.Size = new System.Drawing.Size(138, 13);
+            this.sideBarMotto.Size = new System.Drawing.Size(171, 16);
             this.sideBarMotto.TabIndex = 1;
             this.sideBarMotto.Text = "Stay on Task, Stay on Time";
             this.sideBarMotto.Click += new System.EventHandler(this.label2_Click);
@@ -154,9 +160,10 @@
             // 
             this.sideBarTitle.AutoSize = true;
             this.sideBarTitle.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sideBarTitle.Location = new System.Drawing.Point(58, 14);
+            this.sideBarTitle.Location = new System.Drawing.Point(77, 17);
+            this.sideBarTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sideBarTitle.Name = "sideBarTitle";
-            this.sideBarTitle.Size = new System.Drawing.Size(79, 24);
+            this.sideBarTitle.Size = new System.Drawing.Size(100, 30);
             this.sideBarTitle.TabIndex = 0;
             this.sideBarTitle.Text = "Chrono ";
             // 
@@ -164,17 +171,19 @@
             // 
             this.proTipContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.proTipContainer.Controls.Add(this.label3);
-            this.proTipContainer.Location = new System.Drawing.Point(18, 7);
+            this.proTipContainer.Location = new System.Drawing.Point(24, 9);
+            this.proTipContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.proTipContainer.Name = "proTipContainer";
-            this.proTipContainer.Size = new System.Drawing.Size(193, 136);
+            this.proTipContainer.Size = new System.Drawing.Size(257, 167);
             this.proTipContainer.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 11);
+            this.label3.Location = new System.Drawing.Point(16, 14);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.Size = new System.Drawing.Size(51, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Pro Tip";
             // 
@@ -183,9 +192,10 @@
             this.proTipPanel.BackColor = System.Drawing.Color.Azure;
             this.proTipPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.proTipPanel.Controls.Add(this.proTipContainer);
-            this.proTipPanel.Location = new System.Drawing.Point(-11, 507);
+            this.proTipPanel.Location = new System.Drawing.Point(-15, 624);
+            this.proTipPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.proTipPanel.Name = "proTipPanel";
-            this.proTipPanel.Size = new System.Drawing.Size(221, 164);
+            this.proTipPanel.Size = new System.Drawing.Size(294, 201);
             this.proTipPanel.TabIndex = 9;
             this.proTipPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
@@ -198,8 +208,9 @@
             this.pagePanel.Controls.Add(this.insightsControl1);
             this.pagePanel.Location = new System.Drawing.Point(207, 0);
             this.pagePanel.Name = "pagePanel";
-            this.pagePanel.Size = new System.Drawing.Size(620, 667);
+            this.pagePanel.Size = new System.Drawing.Size(827, 821);
             this.pagePanel.TabIndex = 10;
+            this.pagePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.pagePanel_Paint);
             // 
             // insightsControl1
             // 
@@ -239,13 +250,13 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(828, 663);
+            this.ClientSize = new System.Drawing.Size(1104, 816);
             this.Controls.Add(this.pagePanel);
-            this.Controls.Add(this.proTipPanel);
             this.Controls.Add(this.sideBarPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -271,9 +282,6 @@
         private System.Windows.Forms.Button priorityNavButton;
         private System.Windows.Forms.Button dashBoardNavButton;
         private System.Windows.Forms.PictureBox chronoLogo;
-        private System.Windows.Forms.Panel proTipContainer;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel proTipPanel;
         public System.Windows.Forms.Button taskNavButton;
         private System.Windows.Forms.Panel pagePanel;
         private tipsContro_ tipsContro_1;
