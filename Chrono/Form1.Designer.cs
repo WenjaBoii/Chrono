@@ -39,15 +39,13 @@
             this.sideBarMotto = new System.Windows.Forms.Label();
             this.sideBarTitle = new System.Windows.Forms.Label();
             this.pagePanel = new System.Windows.Forms.Panel();
-            this.insightsControl1 = new Chrono.insightsControl();
+            this.insightsControl1 = new Chrono.InsightsControl();
             this.tipsContro_1 = new Chrono.tipsContro_();
             this.focusTimerControl1 = new Chrono.focusTimerControl();
             this.prioritiesControl1 = new Chrono.prioritiesControl();
             this.tasksControl1 = new Chrono.tasksControl();
             this.sideBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chronoLogo)).BeginInit();
-            this.proTipContainer.SuspendLayout();
-            this.proTipPanel.SuspendLayout();
             this.pagePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -167,37 +165,12 @@
             this.sideBarTitle.TabIndex = 0;
             this.sideBarTitle.Text = "Chrono ";
             // 
-            // proTipContainer
-            // 
-            this.proTipContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.proTipContainer.Controls.Add(this.label3);
-            this.proTipContainer.Location = new System.Drawing.Point(24, 9);
-            this.proTipContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.proTipContainer.Name = "proTipContainer";
-            this.proTipContainer.Size = new System.Drawing.Size(257, 167);
-            this.proTipContainer.TabIndex = 8;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 14);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Pro Tip";
             // 
             // proTipPanel
             // 
-            this.proTipPanel.BackColor = System.Drawing.Color.Azure;
-            this.proTipPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.proTipPanel.Controls.Add(this.proTipContainer);
-            this.proTipPanel.Location = new System.Drawing.Point(-15, 624);
-            this.proTipPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.proTipPanel.Name = "proTipPanel";
-            this.proTipPanel.Size = new System.Drawing.Size(294, 201);
-            this.proTipPanel.TabIndex = 9;
-            this.proTipPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
             // pagePanel
             // 
@@ -210,7 +183,6 @@
             this.pagePanel.Name = "pagePanel";
             this.pagePanel.Size = new System.Drawing.Size(827, 821);
             this.pagePanel.TabIndex = 10;
-            this.pagePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.pagePanel_Paint);
             // 
             // insightsControl1
             // 
@@ -263,9 +235,6 @@
             this.sideBarPanel.ResumeLayout(false);
             this.sideBarPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chronoLogo)).EndInit();
-            this.proTipContainer.ResumeLayout(false);
-            this.proTipContainer.PerformLayout();
-            this.proTipPanel.ResumeLayout(false);
             this.pagePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -285,7 +254,7 @@
         public System.Windows.Forms.Button taskNavButton;
         private System.Windows.Forms.Panel pagePanel;
         private tipsContro_ tipsContro_1;
-        private insightsControl insightsControl1;
+        private InsightsControl insightsControl1;
         private tasksControl tasksControl1;
         private prioritiesControl prioritiesControl1;
         private focusTimerControl focusTimerControl1;

@@ -38,7 +38,6 @@ namespace Chrono
         {
             InitializeComponent();
             LoadTips();
-            SetupButtons();
             StartTimer();
         }
 
@@ -64,15 +63,8 @@ namespace Chrono
                 "Exercise for mental clarity"
             };
 
-            notifs = new List<Notification>();
-            AddNotif("Welcome to Chrono!", "Daily");
         }
 
-        private void SetupButtons()
-        {
-            allButton.Click += (s, e) => FilterAll();
-            buttonUnread.Click += (s, e) => FilterUnread();
-        }
 
         private void StartTimer()
         {
@@ -118,62 +110,20 @@ namespace Chrono
             panel.Controls.Add(lbl);
         }
 
-        public void AddNotif(string msg, string type)
-        {
-            notifs.Insert(0, new Notification(msg, type));
-            UpdateNotifs();
-        }
+       
+        
 
-        private void FilterAll()
-        {
-            showAll = true;
-            allButton.BackColor = Color.Black;
-            allButton.ForeColor = Color.White;
-            buttonUnread.BackColor = Color.White;
-            buttonUnread.ForeColor = Color.Black;
-            UpdateNotifs();
-        }
+        
 
-        private void FilterUnread()
-        {
-            showAll = false;
-            buttonUnread.BackColor = Color.Black;
-            buttonUnread.ForeColor = Color.White;
-            allButton.BackColor = Color.White;
-            allButton.ForeColor = Color.Black;
-            UpdateNotifs();
-        }
+        
 
-        private void UpdateNotifs()
-        {
-            var display = showAll ? notifs : notifs.Where(n => !n.IsRead).ToList();
+       
 
-            if (display.Count == 0)
-            {
-                notificationText.Visible = true;
-                notificationText.Text = "No notification";
-            }
-            else
-            {
-                notificationText.Visible = false;
-                // You can add notification cards here if needed
-            }
-        }
+        
 
-        public void MarkRead(Notification n)
+        private void tipsPanel_Paint(object sender, PaintEventArgs e)
         {
-            n.IsRead = true;
-            UpdateNotifs();
-        }
 
-        public void NotifyTimer(bool isWork)
-        {
-            AddNotif(isWork ? "Work done! Take a break" : "Break over! Back to work", "Timer");
-        }
-
-        public void NotifyTask(string task)
-        {
-            AddNotif($"Reminder: {task}", "Task");
         }
     }
 }
